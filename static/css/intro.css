@@ -1,0 +1,267 @@
+
+/*CSS Variables (to my current understanding--which is not much :| )*/
+:root {
+    --port-section-border-color: #2aed5b;
+    /*OLD BORDER COLOR --> rgb(42, 146, 238)*/
+}
+
+
+.intro-message {
+    font-size: 8em;
+    letter-spacing: 0.1em;
+    animation-name: text-color-change;
+    animation-duration: 4s;
+    animation-delay: -0.5s;
+}
+
+h1 {
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+p {
+    /*font-family: "Lucida Console", "Courier New", monospace;*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*margin-bottom: 1em;*/
+}
+
+#nick-headshot {
+    /*border: 20px solid blue;*/
+    /*margin-top: 50px;*/
+    border-radius: 10px;
+}
+
+
+#about-me-holder {
+    border: 0px black solid;
+    border-radius: 10px;
+    padding: 2em;
+    
+}
+
+
+
+#about-me-holder p {
+    margin-bottom: 1em;
+    line-height: 1.6em;
+}
+
+#meet-nick-anim {
+    max-height: 350px;
+}
+
+
+
+.card {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#uw-logo {
+    margin-top: 20px;
+    max-height: 175px;
+    max-width: 175px;
+}
+
+#upwork-creds {
+    margin-top: 4em;
+    background-color: rgb(42, 146, 238);
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+#uw-profile-img {
+    max-height: 100px;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.col {
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+
+
+
+
+#portfolio-section-header {
+    margin-bottom: 2em;
+}
+
+
+#experience-list-holder {
+    margin-top: 2em;
+}
+
+
+.work-header-row {
+    background-color: rgb(236, 233, 233);
+    /*border: 3px solid;
+    border-color: #6b0bba;*/
+    border-top: 20px solid var(--port-section-border-color);
+    border-bottom: 20px solid var(--port-section-border-color);
+    margin-bottom: 3em;
+}
+
+.work-category-header {
+    background-color: rgb(188, 187, 187);
+}
+
+.work-category-description {
+    background-color: rgb(236, 233, 233);
+}
+
+
+
+
+
+/*  NOTE: Now replaced (can delete post cleanup)
+.subject-header h2{
+    background-color: rgb(188, 187, 187);
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+.subject-header p {
+    font-size: 1.33em;
+    background-color: rgb(236, 233, 233);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: 100;
+    max-width: 45em;
+    padding-left: 1em;
+    margin-top: -5.5em;
+}
+*/
+
+
+.accordion {
+    margin-bottom: 2em;
+    max-width: 80%;
+}
+
+
+
+#section-description {
+    margin-top: -6em;
+    margin-bottom: -1em;
+}
+
+.accordion-button {
+    background-color: rgb(42, 146, 238);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+
+/*   NOTE: This is probably problem area for mobile (slides way too small)
+.carousel-inner {
+    padding-left: 7em;
+    padding-right: 7em;
+}
+*/
+
+/*.carousel-item container {
+    margin-top: 2em;
+    adding-top: 2em;
+}
+
+.carousel-item img-fluid {
+    max-width: 1%;
+}
+*/
+
+
+
+.slide-indent {
+    margin-left: 2.5em;   /*5*/
+    margin-right: 2.5em;
+}
+
+.carousel-item {
+    /*background-color: pink;*/
+    background-color: #a4a7a8; /* #d7edf7; */
+    border-radius: 10px;
+    padding-top: 1em;
+    margin-bottom: 4em;
+}
+
+.carousel-item p {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5em;
+    box-shadow: 0px 1px 10px black;
+}
+
+.carousel-control-prev-icon {
+    background-color: rgb(42, 146, 238);
+    border-radius: 3px;
+}
+
+.carousel-control-next-icon {
+    background-color: rgb(42, 146, 238);
+    border-radius: 3px;
+}
+
+.about-p {
+    /*background-color: #cee3ff;*/
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+}
+
+
+
+/* Shadow / reflection effect */
+.pure-image {
+    z-index: 2;
+    display: block;
+    position: relative;
+}
+
+.image-shadow {
+bottom: -0.1em;
+  filter: blur(20px);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  transform: scale(0.95);
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 2em;
+}
+
+
+
+.shadowed-img {
+    box-shadow: 0px 10px 9px black;
+    margin-bottom: 3em;
+    /*max-height: 1500px;
+    max-width: 900px;*/
+}
+
+
+
+
+video {
+    max-width: 80%;
+}
+
+.video-container {
+    background-color: #a4a7a8;
+}
+
+
+
+
+/* Animations */
+
+@keyframes text-color-change {
+    from {color: rgb(42, 146, 238);}
+    to {color: black;}
+  }

@@ -1,0 +1,10 @@
+/venv
+.DS_Store
+/migrations
+/templates/gallery.html
+/static/images/headshot_alternate.png
+/static/images/meet_nick_computer.gif
+/static/images/nick_headshot_blue.png
+/static/images/nick_headshot.png
+/static/images/test_gif.gif
+/static/images/trumpbefuddled.jpg

@@ -1,0 +1,26 @@
+
+
+.review-container {
+    background-color: #aeb4b7;
+    max-height: 1.75em;
+    max-width: 12em;
+}
+
+.review-container img {
+    max-height: 1.5em;
+    margin-left: -1em;
+    margin-bottom: 0.2em;
+}
+
+.project-title {
+    font-size: 1.1em;
+    font-weight: 900;
+}
+
+.card {
+    margin: 3em 0em 3em 0em;
+}
+
+.card-header {
+    background-color: #c6cdd1;
+}

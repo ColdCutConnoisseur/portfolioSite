@@ -1,0 +1,1007 @@
+{% extends "base.html" %}
+{% block page_title %}Nick's Portfolio{% endblock %}
+
+{% block intro_active %}active{% endblock %}
+
+{% block custom_page_css %} {{url_for('static', filename='/css/intro.css')}} {% endblock %}
+
+{% block aria_intro_active %}aria-current="page"{% endblock %}
+
+{% block content %}
+
+  <!--Introduction Section-->
+  <div class="container-fluid text-left" id="header-container">
+    <!--<img src="{{ url_for('static', filename='/images/meet_nick_computer.gif')}}" class="img-fluid" id="meet-nick-anim" alt="meet-nick">-->
+    <div class="intro-message">
+      Meet Nick.
+    </div>
+  </div>
+
+  <div class="container-fluid text-center" id="intro-container">
+    <div class="row justify-content-between">
+
+      <div class="col-8 col-sm-4 mx-auto">
+          <!--<h1>Meet Nick!</h1>-->
+          
+          <img src="{{ url_for('static', filename='/images/shadow_headshot_color.png')}}" class="img-fluid shadow-lg" id="nick-headshot" alt="headshot">
+      </div>
+
+      <div class="col-md-8">
+        <div class="shadow-lg" id="about-me-holder">
+          <!--<h2>About Me</h2>-->
+          <!--<img src="{{ url_for('static', filename='/images/meet_nick_computer.gif')}}" class="img-fluid" id="meet-nick-anim" alt="meet-nick">-->
+          <p>Nick graduated from the Kelley School of Business at Indiana University--Bloomington with B.S. degrees in Finance and Accounting.  He has 7+ years experience as a professional futures trader, trading everything from high-touch strategies to algorithmic, low-latency strategies across different prop shops.  The bulk of his experience has been as a spread trader.</p>
+
+          <p>Nick gained an initial interest in and appreciation for the python programming language as a byproduct of his experience working in automated trading environments.
+            This interest continued to grow as he began using it
+            outside of a professional setting to automate everyday tasks and apply to his hobbies.  He now uses it professionally.</p>
+
+          <p>Nick has over a decade's worth of experience using python, but has spent the last three years using it professionally as a freelance python developer across multiple freelance platfroms.  The extent of his work for clients has ranged from web and workflow automations to the development of custom desktop and web applications.
+            To get a more specific idea of projects that Nick has worked on in the past, take a look at his portfolio below or follow the link to his github.  For a more generalized look at
+            his areas of experience, take a look at this section <a href="#experience-anchor">here</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-8 col-sm-4 mx-auto">
+        <div class="card" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='images/GitHub_Logo.png')}}" class="card-img-top" alt="github-logo">
+          <div class="card-body">
+            <a href="https://github.com/ColdCutConnoisseur" class="btn btn-primary">Checkout My Work On GitHub</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!--Links Section-->
+  <!--justify-content-evenly-->
+  <!--
+  <div class="container" id="links-container">
+    <div class="row">
+      <div class="col-8 col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='images/GitHub_Logo.png')}}" class="card-img-top" alt="github-logo">
+          <div class="card-body">
+            <a href="https://github.com/ColdCutConnoisseur" class="btn btn-primary">Checkout My Work On GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+
+
+    
+
+
+
+  <!--Upwork Resume-->
+  <div class="container-fluid text-center shadow-lg" id="upwork-creds">
+    <h2>Freelance Developer Resume</h2>
+    <img src="{{ url_for('static', filename='images/upwork_profile.png')}}" class="img-thumbnail" alt="upwork-profile-snap" id="uw-profile-img">
+    <div class="container-fluid" id="uw-resume-list-container">
+      <div class="row justify-content-around">
+        <div class="col">
+          60+ Jobs Completed
+        </div>
+        <div class="col">
+          Over 3 Years on the Platform
+        </div>
+        <div class="col">
+          100% Job Completion Rate
+        </div>
+        <div class="col">
+          5/5 Star Rating
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+  <!--Experience & Expertise Lists-->
+  <div class="container-fluid" id="experience-list-holder">
+    <h2 id="experience-anchor">Experience</h2>
+    <div class="row justify-content-around">
+      <div class="col-8 col-sm-4 mx-auto">
+        <ul id="experience-list">
+          <li>graphical user interfaces</li>
+          <li>profiling</li>
+          <li>unittesting</li>
+          <li>version control</li>
+          <li>virtual machines</li>
+          <li>executable creation</li>
+          <li>databases</li>
+          <li>database migration</li>
+          <li>desktop application development</li>
+          <li>QA testing</li>
+          <li>web & mobile design</li>
+          <li>blockchain, NFT, and cryptocurrency</li>
+          <li>web development</li>
+          <li>scripts & utilities</li>
+          <li>web scraping and automation</li>
+          <li>API creation and testing</li>
+          <li>apllication and web hosting</li>
+          <li>containerization</li>
+          <li>web3</li>
+          <li>smart contract creation, testing, and deployment</li>
+          <li>data validation and cleansing</li>
+        </ul>
+      </div>
+
+      <div class="col-8 col-sm-4 mx-auto">
+        <ul id ="tech-list">
+          <li>python</li>
+          <li>flask</li>
+          <li>PyQt6</li>
+          <li>cProfile</li>
+          <li>Selenium</li>
+          <li>Pandas</li>
+          <li>git</li>
+          <li>github</li>
+          <li>solidity</li>
+          <li>javascript / typescript</li>
+          <li>Amazon Web Services</li>
+          <li>Google Cloud</li>
+          <li>mySQL</li>
+          <li>postgreSQL</li>
+          <li>AWS Textract</li>
+          <li>AWS EC2</li>
+          <li>AWS S3</li>
+          <li>Twilio</li>
+          <li>Insomnia</li>
+          <li>Postman</li>
+          <li>docker</li>
+          <li>jinja</li>
+          <li>pydantic</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+
+
+  
+
+  <!--Portfolio Section-->
+  <h1 id="portfolio-section-header">Project Portfolio</h1>
+
+  <div class="container-fluid">
+    <div class="row align-items-center work-header-row">
+      <div class="col-12 col-md-4 work-category-header">
+        <h2 id="auto-trading-anchor">Automated Trading & Strategy Development</h2>
+      </div>
+      <div class="col-12 col-md-8 work-category-description">
+        <p>Here's some of the strategy development work I've done + my own automated trading setup.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trading Accordion -->
+  <div class="accordion mx-auto" id="trading-portfolio-accordian">
+
+
+
+    <!--Guy/Richard Trading Application & Backtester-->
+    <div class="accordion-item">
+
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTraderDemo" aria-expanded="true" aria-controls="collapseTraderDemo">
+          Python Trader and Backtester for Interactive Brokers
+        </button>
+      </h2>
+
+      <div id="collapseTraderDemo" class="accordion-collapse collapse show" data-bs-parent="#trading-portfolio-accordian">
+        <div class="accordion-body">
+
+          <h4>About</h4>
+
+          <p class="about-p">This project bundled an API connection to Interactive Brokers (orders and market data),
+            a trade strategy class--allowing for writing and easily configuring differing trade strategies,
+            charting functionality for displaying
+            both historical and live data as well as indicator objects, functionality for sim versus live trades,
+            and a graphical user interface to tie everything together, complete with a separate configuration page.
+
+            <br>
+            <br>
+
+            As an add on, the same underlying app skeleton was also used to create a backtester application.
+              The trade backtester allowed a user to run a specified
+            trade strategy over historical data to see how the strategy would have performed during that time period.
+
+            <br>
+            <br>
+
+            The backtester app has functionality for plotting the historical data over the specified time period and configured data resolution, and 
+            also includes peripheral functionality like plotting trade take-profits and stops on the chart, plotting trade indicator objects,
+            and has helper functions that allow for the user to step through market data updates or skip to notable events like
+            trade setups, order sends, order fills, order cancels, trade exits, etc.
+          </p>
+
+          <div id="customTraderCarousel" class="carousel slide">
+            <div class="carousel-inner container-fluid text-center">
+
+              <div class="carousel-item active">
+                  <!--<img src="{{ url_for('static', filename='images/custom_trading_app/trader_app_overview.png')}}" class="d-block w-100 image-shadow" alt="trader-app-demo-shadow">-->
+                  <img src="{{ url_for('static', filename='images/custom_trading_app/trader_app_overview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="trader-app-demo">
+
+                  <div class="container">
+                    
+                    <h5>Trader App Overview</h5>
+                    <p>Here's an overview of the 'trader' application.  It has functionality for connecting to the broker and streaming live data, 
+                      calculating internal strategy metrics, plotting of the historical + live data and also chart objects for indicators that the
+                      underlying trade strategy considers.  Additionally, peripheral functionality exists to change the charting & data resolution, 
+                      functionality to save candle data as a .csv file, and a configuration page.
+                    </p>
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/trader_config_overview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="trader-config-page">
+                <div class="container">
+                  <h5>Trader Application Configuration</h5>
+                  <p>Here's a closer look at the configuration page.  Please note that aesthetics were sacrificed in an effort to keep costs
+                    cheaper for this project!</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/composite_indicators.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="blank-tester">
+                <div class="container">
+                  <h5>Various Strategy Indicator Objects</h5>
+                  <p> Here's a composite showing different types of indicator objects that the application can track and plot.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/backtester_init.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="blank-tester">
+                <div class="container">
+                  <h5>Backtester App</h5>
+                  <p>The backtester application is essentially a fork of the trader app, using a similar strucuture and setup.
+                    It differs however, in that it allows for testing the configured trade strategy over historical data, and it also exposes
+                    additional functionality allowing for a stepthrough of the historical data and trades.
+                    It also displays the computed trade indicators and profit / loss levels for quick visual highlighting of past trades.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/backtester_visual_overview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="tester-overview-output">
+                <div class="container">
+                  <h5>Trade Overview</h5>
+                  <p>After the backtester has run over the historical data, it will show a visual overview of the trade performance.  With trade plots
+                    (highlighted in pink) showing profit and stop-loss levels over the period of the trade.  The first highlighted trade is a long trade and
+                    the second, a short.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/backtest_raw_output.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="raw-bt-output">
+                <div class="container">
+                  <h5>Performance Output</h5>
+                  <p>The backtester will also provide a summary output.  This summary provides stats regarding strategy performance, order sends, fills, 
+                    cancels, etc.  Again, left barebones to cut down on costs. 
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/trade_jump_back.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="jump-back">
+                <div class="container">
+                  <h5>Jump to Individual Trades</h5>
+                  <p>The backtester exposes functionality to allow the user to jump to the indices of each individual trade in order to 
+                    better inspect trade setups. 
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/step_forward.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="step-thru">
+                <div class="container">
+                  <h5>Step Through Updates</h5>
+                  <p>Additionally, the backtester allows you to step through each individual market update to see the progression of a trade
+                    or market updates.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/trade_step_forward.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="step-back">
+                <div class="container">
+                  <h5>Step Backward Through Updates</h5>
+                  <p>Conversely, the backtester also allows you to step backward through updates to review trades and market conditions.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#customTraderCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#customTraderCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+            <div class="slide-indent">
+
+              <h3>What I Used:</h3>
+              <ul>
+                <li><code>Requests</code> for broker connection (orders and market data)</li>
+                <li><code>PyQt6</code> for the desktop app's user interface</li>
+                <li><code>pyqtgraph</code> for graphing and creating custom object plots for trade indicators</li>
+                <li><code>cProfile</code> to help find areas to address for performance improvements </li>
+              </ul>
+              
+              <h3>What I Learned:</h3>
+              <p>This was the first time I used <code>pyqtgraph</code>.  It's an awesome package that was really helpful in
+              allowing me to create custom chart objects (GraphicsObject) for each of the individual indicators used on the chart.</p>
+              <p>This was my first project putting Docker / containerization into practice.</p>
+            </div>
+
+          </div>
+ 
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion-item">
+
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          TradingView Strategy & Automating Broker Execution
+        </button>
+      </h2>
+
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#trading-portfolio-accordian">
+        <div class="accordion-body">
+
+          <h4>About</h4>
+
+          <p class="about-p">I've created hundreds of TradingView indicators, strategies, and libraries using their native language, <code>pinescript</code>.
+          Here's an example of a strategy that I previously employed paired with trading software that I wrote.  The software takes signals emitted by the charting platform,
+          translates those signals into actionable trades, and then forwards those trades to a configured broker for execution.
+          </p>
+
+          <div id="tradingCarousel" class="carousel slide">
+            <div class="carousel-inner container-fluid text-center">
+
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/nick_strategy.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="my-strategy">
+                <div class="container">
+                  <h5>Example TradingView Strategy</h5>
+                  <p>Here's an overlay of a TradingView strategy I use for buying equities off of lows.
+                    I created it with TradingView's scripting language, <code>Pinescript</code>.
+                    A cool feature of the TradingView software is that it employs callbacks or webhooks for whenever
+                    a trade would occur per the coded strategy.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/new_signals.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="signals-dash">
+                <div class="container">
+                  <h5>API and Dashboard</h5>
+                  <p>Here's a barebones API + dashboard I created with flask and host for free on pythonanywhere.com.
+                    I set the TradingView webhooks to the API call that adds trade signals to a database within this flask app.
+                    I set the payload from TradingView's side to include attributes like trade side, quantity, price,
+                    and an API key used for authentication.
+                    Whenever new signals are posted and unprocessed, they are displayed on this dashboard page.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/trader_dash.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="trader-dash">
+                <div class="container">
+                  <h5>Desktop App</h5>
+                  <p>This app handles all authentication on the broker side (and functionality that continues to refresh authentication as tokens near expiration).
+                    It then subscribes to market streams for any equities set to trade in the app's configuration.  I use a python requests stream / session object
+                    to handle market update messages and keep a current orderbook for anything I am trading.
+                    A separate thread is started and a timeout occurs every (configured) few seconds.  On a timeout,
+                    the application will poll the flask app to see if any new trade signals have arrived since the last poll.
+                    If a new signal has occurred, the app translates and formats a new order to my broker's API.
+                    An audit trail is provided both in the 'Processed Signals' and the 'Trade Review' windows.
+                    My trading exposure is then updated in the 'Open Positions' window.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/ts_dash.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="ts-dash">
+                <div class="container">
+                  <h5>Broker API Execution</h5>
+                  <p>Here an open trade is reflected on the broker's side.  It remains open until an exit call is received by my trading application
+                    (Again forwarded by the underlying TradingView strategy).
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/example_trader_app.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="facelift">
+                <div class="container">
+                  <h5>App Facelift</h5>
+                  <p>Messing around with PyQt stylesheets--something I haven't extensively used in the past.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#tradingCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#tradingCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+            <div class="slide-indent">
+              <h3>What I Used:</h3>
+              <ul>
+                <li>TradingView <code>Pinescript</code></li>
+                <li><code>Insomnia</code> for testing API calls and endpoints.</li>
+                <li><code>Flask</code> for the API and dashboard.</li>
+                <li><code>Requests</code> for market streams and orders.</li>
+                <li><code>Sqlite</code> for holding trade signals received by the API and tracking their state.</li>
+                <li><code>PyQt6</code> for the desktop app's user interface.</li>
+              </ul>
+              
+              <h3>What I Learned:</h3>
+              <p>This was my first time working with an authentication that utilized refresh tokens.</p>
+              <p>I was also impressed with how 'competitive' you can be with python; the app allows for better execution in terms of time & price than I had originally imagined it would.</p>
+
+            </div>
+
+          </div>
+ 
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="row work-header-row">
+      <div class="col-12 col-md-4 work-category-header">
+        <h2 id="desktop-apps-anchor">Workflow Automation & Desktop Applications</h2>
+      </div>
+      <div class="col-12 col-md-8 work-category-description">
+        <p>Here are some process automations and desktop applications I've worked on in the past.  Typically, these projects will aim to 
+          automate processes that are either tedious in some sort of manual capacity, or that gain efficiency through automation.
+          <br>
+          <br>
+          For example, this might include automating a task that is repeated the same way multiple times, it could be
+          encapsulating functionality for a specific workflow in such a manner that all functionality is conveniently combined
+           (think combining complex calculations with data storage),
+          or it might be where a workflow can be completed in a fraction of the time that it would normally take.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion mx-auto" id="automation-accordion">
+
+    <div class="accordion-item">
+
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComp" aria-expanded="true" aria-controls="collapseComp">
+          Compensation Software
+        </button>
+      </h2>
+
+      <div id="collapseComp" class="accordion-collapse show" data-bs-parent="#automation-accordion">
+
+        <div class="accordion-body">
+
+          <h4>About</h4>
+
+          <p class="about-p">This was software commissioned for a roofing company in Illinois to better track their internal compensation structure for members of its sales team.
+            <br>
+            <br>
+            As a sales contractor progresses through a program of internally tracked milestones--like the number of completed roofing sales and jobs or the size of their sales team for example--the
+            contractor will graduate to higher payout tiers that entail a better, albeit more complicated, compensation structure.
+          </p>
+
+          <div id="compensationCarousel" class="carousel slide">
+
+            <div class="carousel-inner container-fluid text-center">
+
+              <div class="carousel-item active">
+                <img src="{{url_for('static', filename='images/odb_app_images/app_main_tab.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-app-overview">
+                <div class="container">
+                  <h5>Overview</h5>
+                  <p>This is an overview of the 4-tabbed interface.  On this primary page, a dropdown list is populated with
+                    unprocessed jobs that were closed during the current week.  It also populates the current
+                    compensation stats for the sales contractor associated with the currently selected job.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/app_unprocessed_jobs_list.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-unprocessed-jobs">
+                <div class="container">
+                  <h5>Unprocessed Jobs</h5>
+                  <p>The jobs are sorted by the 'close date' to ensure that they are processed in order.  When a job is selected from 
+                    the dropdown, all associated information for the related sales person is automatically displayed.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/payables.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-payables">
+                <div class="container">
+                  <h5>Payables</h5>
+                  <p>The user then enters the gross profit for the job and whether that job qualifies for the compensation
+                    program. If the job meets requirements for the program, the application will compute the compensation
+                    attributable to the lead sales contractor and their team.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/process_button.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-processing">
+                <div class="container">
+                  <h5>New Job Processing</h5>
+                  <p>After confirming the compensation amounts, the user will click the 'Mark Job as Processed'
+                    button, which updates all attributable job and compensation information within the company's
+                    database.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/gr_tab_loaded.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-group-relationships">
+                <div class="container">
+                  <h5>Team Relationships</h5>
+                  <p>This page is responsible for creating or updating the relationships
+                    between a sales contractor and their team.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/org_chart_tab.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-org-chart">
+                <div class="container">
+                  <h5>Team Overview / Org Chart</h5>
+                  <p>The purpose of this tab is to provide an overview of a sales contractor and their team--it serves as a quickview
+                    for specific individual & team stats as well as the hierarchy of each team member.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/attribs_loaded.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-sales-attribs">
+                <div class="container">
+                  <h5>Individual Performance Stats</h5>
+                  <p>The third tab within the application helps track additional, peripheral attributes for sales contractors.
+                    It houses attributes such as the selected sales person's beginning job count, whether or not that
+                    contractor has any direct hires themselves, and also allows the user to overwrite the compensation tier that the contractor starts at.
+                  </p>
+                  <p>This functionality allows for this software to be employed in the midst of a sales year or for employees that have
+                    negotiated different starting tiers based on professional experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/change_tier_overwrite.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-tier-overwrite">
+                <div class="container">
+                  <h5>Tier Overwrite Functionality</h5>
+                  <p>The compensation tier overwrite allows functionality to start sales contractors at a
+                    compensation tier that exceeds whatever their natural compensation tier would be, given that contractors
+                    number of completed jobs, etc, at the beginning of tracking this program.  It also allows for the sales
+                    person to graduate to further compensation tiers once the requirements for those higher tiers have been
+                    met organically.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_app_images/odb_icon.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="comp-app-icon">
+                <div class="container">
+                  <h5>Application Icon</h5>
+                  <p>The app comes complete with a custom made desktop icon as well...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#compensationCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#compensationCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="slide-indent">
+            <h3>What I Used:</h3>
+            <ul>
+              <li><code>Requests</code> for interacting with the roofing CRM software API</li>
+              <li><code>PostgreSQL</code> on AWS RDB</li>
+              <li><code>Psycopg2</code> for connecting to and querying Postgres database</li>
+              <li><code>PyQt6</code> and <code>pyinstaller</code> for the user interface and application</li>
+            </ul>
+
+            <h3>What I Learned:</h3>
+            <p>This job was really cool in that it was also a consulting / engineering job in addition to the programming.  The company told me what they
+              were looking for and I had to familiarize myself with their data pipeline and try to make everything more efficient.
+            </p>
+          
+            </p>
+              I gained additional experience with PostgreSQL and using it within an AWS setup.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion-item">
+
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Twitter API & Automated Sports Betting
+        </button>
+      </h2>
+
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#automation-accordion">
+        <div class="accordion-body">
+
+          <div class="alert alert-warning" role="alert">
+            NOTE: For Education Purposes Only
+          </div>
+
+          <h4>About</h4>
+
+          <p class="about-p">This app listens to a user-provided Twitter handle
+            that provides NBA player updates.  The app in theory aims to take advantage of the discrepency between new
+            info about a player's status crossing and the time it takes for the information to be reflected in game lines.  If
+            a discrepency exists, the app automatically places a bet.</p>
+
+          <div class="container text-center video-container justify-content-around rounded">
+
+            <video controls>
+              <source src="{{url_for('static', filename='videos/new_sports_b_demo.mp4')}}" type="video/mp4">
+              Sorry, your browser does not support videos.
+            </video>
+
+          </div>
+
+          <p><strong>Details:</strong> The user would configure which Twitter handle they wanted
+          to listen to for player updates and then connect to the Twitter API.  Then they would set
+          an additional two tables in the app configuration.  One was a 'trigger' table.  It is a series
+          of player names and a respective list of actionable verbs or statuses (these could be set to use
+          a configured set of default verbs).  The second table
+          was a 'bet' table in which the user would configure either 'team' or 'player' bets and then link those bets to triggers
+          in the 'trigger' table (player + verb).  If a new tweet crossed containing both the player name and any of the 
+          configured verbage, the bets linked to that specific trigger would be placed on the bookmaker's site.  This was an
+          entirely automated workflow, aka the end-user would just setup configuration variables, start it, and let it run.
+          </p>
+
+          <div class="slide-indent">
+            <h3>What I Used:</h3>
+            <ul>
+              <li><code>Requests</code> for streaming new tweets from the Twitter API</li>
+              <li><code>Selenium</code> for interacting with web elements of the bookmaker site</li>
+              <li><code>PyQt</code> for the user interface</li>
+            </ul>
+
+            <h3>What I Learned:</h3>
+            <p>I thought that there would be 0% chance that discrepencies existed, or basically that the tweeted info would have already
+              been reflected in the lines by the time the app received the update.  Through basic testing it actually looked like these opportunities existed for 
+              a substantial amount of time.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Telegram Trade Message Parser & Formatter
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#automation-accordion">
+        <div class="accordion-body">
+
+          <video controls>
+            <source src="{{url_for('static', filename='videos/Telegram Trade Message Parser.mp4')}}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p><strong>What it does:</strong> </p>
+          <p><strong>How it works:</strong> 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Ticket Messaging Bot & Purchaser
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#automation-accordion">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Binary Options Automated Trading
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#automation-accordion">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Uniswap Liquidity Pool AutoRoller
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#automation-accordion">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Donald J. Trump Tweet Regression Analysis on Predict.com
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#automation-accordion">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+
+  -->
+
+  </div>
+
+
+
+<!--
+  <h2>Web Applications</h2>
+
+  <p>Here are some projects I've worked on that were built using python Flask.</p>
+-->
+  <!-- Web Accordion -->
+<!--
+  <div class="accordion" id="web-accordian">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          TradingView & Automating Broker Execution
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#trading-portfolio-accordian">
+        <div class="accordion-body">
+
+          <h4>About</h4>
+
+          <p>I've created hundreds of TradingView indicators, strategies, and libraries using their native language, <code>pinescript</code>.
+          Here's an example of a strategy that I currently employ paired with software I wrote to provide a callback for trade
+          signals emitted by the TradingView platform.  The callback adds the received trade signals to a database housed within a flask
+          application hosted on pythonanywhere.com.  A separate piece of software then polls an API exposed by the flask application, and
+          will then send translated, and actionable orders to my broker for execution.</p>
+
+          <div id="tradingCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/nick_strategy.png')}}" class="d-block w-100" alt="my-strategy">
+                <div class="container">
+                  <h5>Example TradingView Strategy</h5>
+                  <p>Here's an overlay of a TradingView strategy I use for buying equities off of lows. I created it with TradingView's scripting language, Pinescript.  A cool feature of the TradingView software is that it employs callbacks or webhooks for whenever a trade would occur per the coded strategy.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/new_signals.png')}}" class="d-block w-100" alt="signals-dash">
+                <div class="container">
+                  <h5>API and Dashboard</h5>
+                  <p>Here's a barebones API + dashboard I created with flask and host for free on pythonanywhere.com.  I set the TradingView webhooks to the API call that adds trade signals to a database within the flask API.  I set the payload from TradingView's side to include attributes like trade side, quantity, price, and an API key used for authentication.  Whenever new signals are posted, they are displayed on this dash page.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/trader_dash.png')}}" class="d-block w-100" alt="trader-dash">
+                <div class="container">
+                  <h5>Desktop App</h5>
+                  <p>This app handles all authentication on the broker side.  It then subscribes to market price streams for any equities I have allowed to trade in the app's configuration.  I use a python requests stream to handle market update messages and keep a current orderbook for anything I am trading.  A separate thread is started and a timeout occurs every n seconds.  On a timeout, the application polls my flask API / dashboard to see if any new trade signals have arrived since the last poll.
+                    If a new signal has occurred, a few safety checks are run, and if passed, the app translates and formats a new order to my broker's API.  An audit trail is provided both in the 'Processed Signals' and the 'Trade Review' windows.  My positions are then also updated in the 'Open Positions' window.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/ts_dash.png')}}" class="d-block w-100" alt="ts-dash">
+                <div class="container">
+                  <h5>Broker API Execution</h5>
+                  <p>Here an open trade is reflected on the broker's side.  It remains open until an exit call is received by my desktop trading application.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#tradingCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#tradingCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <h3>What I Used:</h3>
+          <ul>
+            <li>TradingView <code>Pinescript</code></li>
+            <li><code>Insomnia</code> for testing API calls and endpoints</li>
+            <li><code>Flask</code> for the API and dashboard</li>
+            <li><code>Requests</code> for market streams and orders</li>
+            <li><code>Sqlite</code> for holding trade signals received by the API</li>
+            <li><code>PyQt6</code> for the desktop app's user interface</li>
+          </ul>
+          <h3>What I Learned:</h3>
+          <p>For authentication purposes, you need to obtain a new token every n minutes before the current token expires.  This was my first time dealing with this kind of authentication.</p>
+          <p>I'm also impressed with how 'competitive' you can be with python and get way better execution in terms of time & price than I had originally imagined.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <h2>Data Analysis & Stats</h2>
+
+  <p>Here are some projects I've worked on utilizing statistical methods like machine learning and regression analysis.</p>
+-->
+  <!-- Stats Accordion -->
+<!--
+  <div class="accordion" id="web-accordian">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Predictit Market Pricer
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#web-accordian">
+        <div class="accordion-body">
+
+          <h4>About</h4>
+
+          <p>Predictit.org, a political prediction market geared towards studying the phenomenom of 'wisdom of crowds',
+            used to have markets related to how many times the president would tweet in a week.  The market was split up
+            where you could purchase shares in buckets, say 240-250 (yes, total tweets in a week--Donald Trump used to tweet like
+            a mad man).  The bet would be in the money if the total tweets from that account settled within the bucket by the end of the week.
+          </p>
+
+          <div id="statsCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/predictit_overview.png')}}" class="d-block w-100" alt="predictit_home">
+                <div class="container">
+                  <h5>PredictIt Overview</h5>
+                  <p>PredictIt offers various markets where you can purchase shares in topics such as the next president
+                     of the United States, which country will go to war next, and which world leader or Supreme Court Justice
+                     will pass away next (it is a sad corner of the web).
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/market_overview.png')}}" class="d-block w-100" alt="predictit_market">
+                <div class="container">
+                  <h5>Markets</h5>
+                  <p>On settlement, the correct option in the market will settle to $1.  So in practice, if I were to purchase shares of
+                      Biden for $0.43 per share and he is re-elected President of the United States, I would make $0.57 per share I purchased.
+                      I am also afforded the opportunity to effectively short that option by purchasing 'No' shares which should be priced inversely
+                      to those shares in the 'Yes' market.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/tweet_pace.png')}}" class="d-block w-100" alt="tweet-pace">
+                <div class="container">
+                  <h5>Models</h5>
+                  <p>First, using the Twitter API and existing databases for both Donald Trump's and the Whitehouses tweets,
+                    I collected basic summary stats on the historical behavior of both of these accounts. Then using that info + some basic stats and very fundamental options pricing
+                    models, I was able to create a dashboard that would help try to predict the likelihood that certain options would hit.
+                  </p>
+                  <p>This is just a simple illustration of pace.  At this point in time (early in the week), the President would have tweeted 9 times
+                    more than on average at this point in the week.  And then a simple extrapolation from that, would be on pace to settle at about
+                    253 total tweets for the week.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/bracket_predictions.png')}}" class="d-block w-100" alt="bracket-pricing">
+                <div class="container">
+                  <h5>Pricing</h5>
+                  <p>Using the various models, projections, etc, all of that info was used to come up with a theoretical price for all of 
+                    the current options.  Opportunities existed if the actual market was trading at something like $0.20 for the 250-259 market
+                    (your belief would be that this market was underpriced, so you'd buy shares), and the 260-269 market was trading at something like
+                    $0.30 (your belief being that it is currently overpriced, so you'd sell shares).
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/tweets_pnl.jpeg')}}" class="d-block w-100" alt="pnl-snap">
+                <div class="container">
+                  <h5>In Practice</h5>
+                  <p>Here's a screenshot in the midst of one of my trades (sorry for the quality, I didn't document this projects very well).
+                    The model proved to be pretty effective (at least in the sense that it gave me slightly more conviction in some of trades I was
+                    taking on).  This resulted in me being ranked in the top 100 of PredictIt users in terms of profitability on an almost weekly basis.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/trumpbefuddled.jpg')}}" class="d-block w-100" alt="trump">
+                <div class="container">
+                  <h5>The End</h5>
+                  <p>Unfortunately, this market proved to be too speculative even for PredictIt and they eventually removed it altogether.
+                    I believe at one point they brought it back for President Biden, but it proved to be a dead market without the same wacky tweet habits
+                    as that of President Trump.  Sad.
+                  </p>
+                </div>
+              </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#statsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#statsCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <h3>What I Used:</h3>
+          <ul>
+            <li>TradingView <code>Pinescript</code></li>
+            <li><code>Insomnia</code> for testing API calls and endpoints</li>
+            <li><code>Flask</code> for the API and dashboard</li>
+            <li><code>Requests</code> for market streams and orders</li>
+            <li><code>Sqlite</code> for holding trade signals received by the API</li>
+            <li><code>PyQt6</code> for the desktop app's user interface</li>
+          </ul>
+          <h3>What I Learned:</h3>
+          <p>For authentication purposes, you need to obtain a new token every n minutes before the current token expires.  This was my first time dealing with this kind of authentication.</p>
+          <p>I'm also impressed with how 'competitive' you can be with python and get way better execution in terms of time & price than I had originally imagined.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+    
+
+{% endblock %}
