@@ -2,6 +2,7 @@
 .DS_Store
 /migrations
 /templates/gallery.html
+__pycache__
 /static/images/headshot_alternate.png
 /static/images/meet_nick_computer.gif
 /static/images/nick_headshot_blue.png

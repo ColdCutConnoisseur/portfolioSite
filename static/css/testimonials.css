@@ -1,4 +1,36 @@
 
+h1 {
+    /*margin-top: 2em;
+    margin-bottom: 0em;
+    margin-left: 0.1em;/*
+    letter-spacing: 0.1em;
+    /*text-transform: uppercase;
+    text-decoration: underline;*/
+    font-size: 3.5em;
+    font-weight: 700;
+    background-color: rgb(42, 146, 238);
+    border-radius: 10px;
+    padding: 0.2em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+#header {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#header p{
+    padding: 1.5em;
+    font-size: 1.5em;
+    color: rgb(179, 191, 206);
+}
+
+#client-review-icon {
+    /*min-width: 4em;
+    max-width: 4.5em;*/
+    max-height: 1em;
+}
 
 .review-container {
     background-color: #aeb4b7;

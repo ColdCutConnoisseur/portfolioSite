@@ -2,25 +2,37 @@
 /*CSS Variables (to my current understanding--which is not much :| )*/
 :root {
     --port-section-border-color: #2aed5b;
+    --highlight-purple: #d732fc;
+    --grey: rgb(188, 187, 187);
     /*OLD BORDER COLOR --> rgb(42, 146, 238)*/
 }
 
 
 .intro-message {
-    font-size: 8em;
+    font-size: 7em;
     letter-spacing: 0.1em;
     animation-name: text-color-change;
     animation-duration: 4s;
-    animation-delay: -0.5s;
+    animation-delay: 2s;
 }
 
 h1 {
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-bottom: 0em;
-    letter-spacing: 1em;
-    text-transform: uppercase;
-    text-decoration: underline;
+    margin-left: 0.1em;
+    letter-spacing: 0.1em;
+    /*text-transform: uppercase;
+    text-decoration: underline;*/
+    font-size: 3.5em;
     font-weight: 700;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: var(--grey);
+    border-radius: 10px;
+    padding-left: 0.25em;
 }
 
 p {
@@ -33,14 +45,29 @@ p {
     /*border: 20px solid blue;*/
     /*margin-top: 50px;*/
     border-radius: 10px;
+    max-width: 75%;
 }
 
+#github-card {
+    max-width: 75%;
+}
+
+#github-card a {
+    background-color: green; /*--var(--highlight-purple);*/
+}
+
+
+#intro-col-2 {
+    /*max-height: 100%;
+    min-width: 80%;*/
+}
 
 #about-me-holder {
     border: 0px black solid;
     border-radius: 10px;
     padding: 2em;
-    
+    /*margin-right: 5em;*/
+
 }
 
 
@@ -54,12 +81,15 @@ p {
     max-height: 350px;
 }
 
-
-
 .card {
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+#github-card {
+    /*margin-top: 20em;*/
+}
+
 
 #uw-logo {
     margin-top: 20px;
@@ -74,9 +104,13 @@ p {
     padding-top: 2em;
 }
 
+#upwork-creds img {
+    height: 10em;
+}
+
 #uw-profile-img {
-    max-height: 100px;
-    margin-top: 0.5em;
+    /*max-height: 100px;*/
+    margin-top: 1em;
     margin-bottom: 1.5em;
 }
 
@@ -86,16 +120,26 @@ p {
 }
 
 
+.full-width-column {
+    max-width: 100%;
+    background-color: purple;
+}
 
-
+.portfolio-header-whole {
+    background-color: var(--highlight-purple);
+}
 
 #portfolio-section-header {
-    margin-bottom: 2em;
+    margin-bottom: 0.75em;
 }
 
 
 #experience-list-holder {
     margin-top: 2em;
+}
+
+#experience-anchor {
+    margin-bottom: 0.75em;
 }
 
 
@@ -105,18 +149,38 @@ p {
     border-color: #6b0bba;*/
     border-top: 20px solid var(--port-section-border-color);
     border-bottom: 20px solid var(--port-section-border-color);
+    border-right: 20px solid var(--port-section-border-color);
+    border-left: 20px solid var(--port-section-border-color);
     margin-bottom: 3em;
 }
 
 .work-category-header {
     background-color: rgb(188, 187, 187);
+    border: 5px solid black;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
 }
 
 .work-category-description {
     background-color: rgb(236, 233, 233);
 }
 
+.white-background-card {
+    background-color: white;
+    max-width: 75%;
+    padding: 2em;
+    border-radius: 10px;
 
+}
+
+.white-background-card-full {
+    background-color: white;
+    max-width: 100%;
+    padding: 2em;
+    border-radius: 10px;
+
+}
 
 
 
@@ -140,12 +204,20 @@ p {
 */
 
 
-.accordion {
-    margin-bottom: 2em;
-    max-width: 80%;
+.preserve-whitespace {
+    white-space: pre;
+    line-height: 1em;
+    font-weight: bold;
 }
 
+.accordion {
+    margin-bottom: 2em;
+    /*max-width: 80%;*/
+}
 
+.accordion-item {
+    margin: 6em 0em 6em 0em;
+}
 
 #section-description {
     margin-top: -6em;
@@ -155,6 +227,7 @@ p {
 .accordion-button {
     background-color: rgb(42, 146, 238);
     font-weight: 900;
+    font-size: 1.25em;
     letter-spacing: 0.1em;
 }
 
@@ -201,6 +274,7 @@ p {
 .carousel-control-prev-icon {
     background-color: rgb(42, 146, 238);
     border-radius: 3px;
+    /*min-height: 30%;*/
 }
 
 .carousel-control-next-icon {

@@ -7,14 +7,26 @@
 {% block custom_page_css %} {{url_for('static', filename='/css/testimonials.css')}} {% endblock %}
 
 {% block content %}
-<h1>Checkout What Past Clients Have Said...</h1>
+<div id="header">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col">
+        <h1>Checkout What Past Clients Have Said...</h1> <!--<img src="{{ url_for('static', filename='/images/client_review_icon.png')}}" class="img-fluid" id="client-review-icon" alt="review-icon"></h1> -->
+      </div>
 
-<br>
+      <div class="col">
+        <p>
+           I've had the oppoprtunity to work with some pretty amazing people.
+           I'm especially grateful for those that were willing
+           to initially work with me--even without having prior experience or
+           reviews on the freelance platform I was using!
+        </p>
+      </div>
 
-<p>I've had the oppoprtunity to work with some pretty amazing people.  Especially those that were willing
-    to initially work with me--without having any prior experience or past reviews on the freelance platform I was using.
-    I am eternally grateful for those clients!
-</p>
+    </div>
+  </div>
+</div>
+
 
 <br>
 
