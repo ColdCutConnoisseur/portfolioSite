@@ -91,10 +91,10 @@
           <li>version control</li>
           <li>virtual machines / cloud computing instances</li>
           <li>executable creation</li>
-          <li>databases</li>
+          <li>relational databases</li>
           <li>database migration</li>
           <li>desktop application development</li>
-          <li>QA testing</li>
+          <li>data validation & QA testing</li>
           <li>web & mobile design</li>
           <li>blockchain, cryptocurrency, web3, etc, etc</li>
           <li>authentication</li>
@@ -108,13 +108,12 @@
           <li>scripts & utilities</li>
           <li>web scraping and automation</li>
           <li>API creation and testing</li>
-          <li>application and web hosting</li>
           <li>cloud computing and hosted services</li>
           <li>containerization</li>
           <li>smart contract creation, testing, and deployment</li>
-          <li>data validation and cleansing</li>
           <li>workflow automation</li>
           <li>task scheduling</li>
+          <li>regular expressions</li>
           <li>large language models</li>
           <li>pdf parsing</li>
           <li>query languages</li>
@@ -477,7 +476,7 @@
 
         <div class="white-background-card-full shadow-lg">
             <p>Here are some process automations and desktop applications I've worked on in the past.  Typically, these projects will aim to
-              automate processes that are either tedious (boring, repetitive) in some sort of manual capacity, or that gain efficiency through automation.
+              automate processes that are either tedious in some sort of manual capacity, or that gain efficiency through automation.
               <br>
               <br>
               For example, this might include automating a task that is repeated the same way multiple times, it could be
@@ -730,6 +729,15 @@
                 </div>
               </div>
 
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/odb_parser_app/group_sum_demo.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="group-sum">
+                <div class="container">
+                  <h5>Group Summing</h5>
+                  <p>And once an item is classified by its respective trade group, you can see that item's amount now added to the trade group's running sum.
+                  </p>
+                </div>
+              </div>
+
 
             </div>
 
@@ -748,20 +756,16 @@
           <div class="slide-indent">
             <h3>What I Used:</h3>
             <ul>
-              <li><code>Requests</code> for interacting with the roofing CRM software API</li>
-              <li><code>PostgreSQL</code> on AWS RDB</li>
-              <li><code>Psycopg2</code> for connecting to and querying Postgres database</li>
-              <li><code>PyQt6</code> and <code>pyinstaller</code> for the user interface and application</li>
+              <li><code>py-pdf-parser</code> for the pdf parsing functionality</li>
+              <li><code>PyQt6</code> for the user interface and application</li>
             </ul>
 
             <h3>What I Learned:</h3>
-            <p>This job was really cool in that it was also a consulting / engineering job in addition to the programming.  The company told me what they
-              were looking for and I had to familiarize myself with their data pipeline and try to make everything more efficient.
+            <p>I became more familiar with the py-pdf-parser package.  This is the most intricate parsing project I've worked on to date.
             </p>
 
-            </p>
-              I gained additional experience with PostgreSQL and using it within an AWS setup.
-            </p>
+            <p>As for PyQt6, this is the first time I've used itemDelegates--this is what was used to create the dropdown menus within the
+               data table display.</p>
 
           </div>
 
@@ -1053,11 +1057,193 @@
                   </div>
               </div>
 
-              <button class="carousel-control-prev" type="button" data-bs-target="#compensationCarousel" data-bs-slide="prev">
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/database_creation.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="database-viewer">
+
+                  <div class="container">
+
+                    <h5>Database Creation</h5>
+                    <p>Here's a view of the database that houses both inventory and price datapoints.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/web_app_initial_table.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="web-app-inventory-table">
+
+                  <div class="container">
+
+                    <h5>Closed Inventory Page</h5>
+                    <p>Here's the initial table within the web app that shows 'closed inventory' items.  These datapoints are pulled from
+                      the 'inventory' table within the database and filtered for events that have already occurred.  I've added a PnL column
+                      so that the user has info available for how they fared on the event sales.  This page has the most utility in figuring
+                      taxable amounts that the user may owe due to ticket sales throughout the past year.  Or perhaps to highlight which events
+                      were most profitable and therefore may be indicative of good buys next time around.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/initial_tabbed.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="tabbed-interface">
+
+                  <div class="container">
+
+                    <h5>Change to a Tabbed Interface</h5>
+                    <p>After seeing the amount of data to be displayed, I elected to use a tabbed interface instead.  There currently exist four tabs:
+                    closed inventory, open inventory, watchlist, and an editor tab.  These are visible at the top of the screenshot.
+                    <br>
+                    The watchlist page will host functionality for watching events in which tickets have not yet been purchased for but the user
+                    may have interest in purchasing.  The editor
+                    tab  will eventually act as an interface to the CRUD operations of the 'inventory' table, so that inventory items and
+                    watchlist items can be updated (these pages are not built out yet).  Inventory items are currently added programatically behind
+                    the scenes.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/gathering_price_data.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="checking-prices">
+
+                  <div class="container">
+
+                    <h5>Starting to Fetch Price DataPoints</h5>
+                    <p>Here is a view of the ticket marketplace listings and the respective terminal output after checking prices.  The
+                    script checks all ticket prices for the appropriate section & row and then returns a configured price point and a supply number.  I currently
+                    have a check where observations are only added at a maximum of once per day; this is to help keep observation numbers down, and was
+                    done in hopes of creating a time series that would be more telling of price trends over time.
+                    <br>
+                    Configured price points may be something like the minimum price offered, the max price, the median price, the average of the
+                    lowest three ticket prices, etc. and this is configured within the app.  In this screenshot, the script is computing the average of the
+                    three lowest ticket prices.
+                    <br>
+                    The supply element or 'section_inventory_count' (seen above as the '32 listings found' line) is a datapoint that I just added
+                    in the 'prices' table of the database.  This count was readily available and I figured it could
+                    be a beneficial datapoint to track for the end user.  It should assist in providing data around whether there exists true demand / low supply
+                    for an event or whether the market is swamped with inventory from scalpers / resellers, etc.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/start_price_dps.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="price-db-datapoints">
+
+                  <div class="container">
+
+                    <h5>Price Datapoints</h5>
+                    <p>The app is now pulling price data and inserting it into the database.  The next steps will be to get the price fetch script
+                    running with a headless browser and then to host this script.  Once the script is hosted, I can schedule it to run once per day
+                    so that current pricing is updated automatically and we have price datapoints for
+                    each day going forward.  After I am comfortable with the number of observations within the database, I will add in the graphing.  I also
+                    need to add a few more columns to the flask dashboard to show attributes like most recent observation price and supply data.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/running_headless.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="headless">
+
+                  <div class="container">
+
+                    <h5>Headless Browser</h5>
+                    <p>The app is now running headless so that it will work on console-only hosting sites.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/formatted_closed.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="closed-start-formatting">
+
+                  <div class="container">
+
+                    <h5>Some Formatting Work</h5>
+                    <p>The initial formatting work cleans up the event name, formats numbers, and color codes the pnl column for profitable / non-
+                    profitable sales.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/initial_price_chart.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="price-chart-start">
+
+                  <div class="container">
+
+                    <h5>Price Charting</h5>
+                    <p>And here are the initial price charts created with Chart.js.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/newly_formatted.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="color-formatting-tix">
+
+                  <div class="container">
+
+                    <h5>Additional Formatting Changes and Buttons for Charts</h5>
+                    <p>Some additional formatting changes.  Of note, there are now buttons to show & hide price and supply charts; this is to
+                      help keep things compact.  I also added conditional formatting where prices will be green or red depending on whether today's
+                      data is an uptick or a downtick from yesterday's prices.  This is currently only in place for the 'Last Px' column.  I'm going
+                      to add this for the 'supply' column as well.  Similarly, I'm hoping to get this logic in place for the color of the price
+                      and supply chart series in the future.
+                      <br>
+                      <br>
+                      Ideally, I'll also want to have some expandable/collapsable columns.  Namely for the Venue, Section, Row, & Seat columns.
+                      <br>
+                      <br>
+                      I think an unrealized gain/loss column would be a good addition as well.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/formatted_w_charts.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="new-formatted-w-charts">
+
+                  <div class="container">
+
+                    <h5>Here A Screenshot with the Charts Showing</h5>
+                    <p>Here's the current view with the price and supply charts displayed.  I think it will be helpful to change the x-axis
+                      so that the charts have a more compact presentation.
+                    </p>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+
+                  <img src="{{ url_for('static', filename='images/ticket_inventory_app/show_hide_charts.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="show-and-hide-charts-functionality">
+
+                  <div class="container">
+
+                    <h5>Here's the Show/Hide Functionality</h5>
+                    <p>And here's the show/hide functionality in action.
+                    </p>
+
+                  </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#ticketInventoryCarousel" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#compensationCarousel" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#ticketInventoryCarousel" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
               </button>
@@ -1068,12 +1254,21 @@
               <h3>What I Used:</h3>
               <ul>
                 <li><code>Flask</code> for the web app functionality and dashboard</li>
+                <li><code>Chart.js</code> for initial visualizations / charting</li>
               </ul>
 
               <h3>What I Learned:</h3>
-              <p>I should showcase my apps as they are created so I don't have to go back and spend a ton of time trying to remember them
-                + document them  ;)
+              <p>This was my first time using the Chart.js package.  Also a good refresher on some javascript in general.
               </p>
+
+              <br>
+
+              <p>The most difficulty faced with this project was that after the app was hosted on pythonanywhere.com, the headless browser
+              gets flagged by the ticket marketplace's cloudflare.  After digging into this issue a bit, I confirmed that the issue results
+              from pythonanywhere's server IP address (and not from being run as headless).  The programattic solution to this would be to use
+              a proxy service that provides reliable, residential proxies and just connect that service to the headless browser driver.  This
+              methodology starts to fall into a gray area in terms of ethical scraping, and may be against the ticket marketplace's bot outlines;
+               I've decided to call the price fetching locally for the time being.</p>
             </div>
 
         </div> <!--close accordion body-->
@@ -1188,8 +1383,8 @@
               and then the app would delete all existing database entries because it assumed that all of those listings were delisted.  On the next update and successful page load,
               the app would then send like 500 messages for each listing thinking that all of these listings were new (empty database table).
               </p>
-              <p>I also had to determine the most efficient task schedule in order to not exceed the amount of cloud resources
-              aka compute time that the client was willing to pay for.  This tool was also a good refresher on Telegram bot messaging and error catching / waits
+              <p>I also had to determine the most efficient task schedule in order to not exceed the amount of compute time that the
+              client was willing to pay for.  This tool was also a good refresher on Telegram bot messaging and error catching / waits
               in selenium.
               </p>
             </div>
