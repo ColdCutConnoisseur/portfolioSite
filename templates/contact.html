@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block page_title %}Contact Nick{% endblock %}
+
+{% block contact_active %}active{% endblock %}
+{% block aria_contact_active %}aria-current="page"{% endblock %}
+
+{% block custom_page_css %} {{url_for('static', filename='/css/contact.css')}} {% endblock %}
+
+{% block content %}
+
+<p>Reach out to Nick at <code>nickmfreelance@gmail.com</code></p>
+
+{% endblock %}

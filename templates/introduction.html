@@ -18,12 +18,12 @@
   </div>
 
   <div class="container-fluid" id="intro-container">
-    <div class="row justify-content-start">
+    <div class="row" id="intro-row">
 
-      <div class="col-12 col-md-4 ml-5-md" id="intro-col-1">
-        <img src="{{ url_for('static', filename='/images/bus_pro_blue.png')}}" class="img-fluid shadow-lg" id="nick-headshot" alt="headshot">
+      <div class="col-12 col-md-3 ml-5-md" id="intro-col-1">
+        <img src="{{ url_for('static', filename='/images/bus_pro_blue.png')}}" class="img-fluid shadow" id="nick-headshot" alt="headshot">
 
-        <div class="card" id="github-card">  <!--style="width: 18rem;"-->
+        <div class="card shadow-lg" id="github-card">  <!--style="width: 18rem;"-->
           <img src="{{ url_for('static', filename='images/GitHub_Logo.png')}}" class="card-img-top" alt="github-logo">
           <div class="card-body">
             <a href="https://github.com/ColdCutConnoisseur" class="btn btn-primary">Checkout My Work On GitHub</a>
@@ -32,7 +32,7 @@
 
       </div>
 
-      <div class="col-12 col-md-6" id="intro-col-2">
+      <div class="col-12 col-md-8" id="intro-col-2">
         <div class="shadow-lg" id="about-me-holder">
 
           <p>Nick graduated from Indiana University with bachelors degrees in Accounting & Finance.  He has 7+ years experience as a professional futures trader,
@@ -199,12 +199,15 @@
       <div class="row grid-row">
         <div class="col">
           <div class="project-preview-box">
-            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/ncaa_hoops_predictor_chart.png') }}" alt="hoops-prediction-preview">
-            <div class="hidden-overlay-name">NCAA Hoops Predictor</div>
+            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/coin_preview.png') }}" alt="cb-prediction-preview">
+            <div class="hidden-overlay-name">Coinbase Price Predictor</div>
           </div>
         </div>
         <div class="col">
-          <div class="project-preview-box"></div>
+          <div class="project-preview-box">
+            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/ncaa_hoops_predictor_chart.png') }}" alt="hoops-prediction-preview">
+            <div class="hidden-overlay-name">NCAA Hoops Predictor</div>
+          </div>
         </div>
         <div class="col">
           <div class="project-preview-box"></div>

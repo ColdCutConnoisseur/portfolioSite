@@ -11,14 +11,6 @@ html {
     font-size: 14px;
 }
 
-.intro-message {
-    font-size: 7em;
-    letter-spacing: 0.1em;
-    animation-name: text-color-change;
-    animation-duration: 4s;
-    animation-delay: 2s;
-}
-
 h1 {
     margin-top: 2em;
     margin-bottom: 0em;
@@ -26,7 +18,7 @@ h1 {
     letter-spacing: 0.1em;
     /*text-transform: uppercase;
     text-decoration: underline;*/
-    font-size: 3.5em;
+    font-size: 3.5rem;
     font-weight: 700;
 }
 
@@ -44,6 +36,40 @@ p {
     /*margin-bottom: 1em;*/
 }
 
+.intro-message {
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    animation-name: text-color-change;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+#intro-container {
+    gap: 0;
+    height: auto;
+}
+
+#intro-row {
+    background-color: red;
+}
+
+#intro-col-1 {
+    background-color: lawngreen;
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+#intro-col-2 {
+    background-color: yellow;
+}
+
+#about-me-holder {
+    height: 100%;
+}
+
+
+
+
+
 #nick-headshot {
     /*border: 20px solid blue;*/
     /*margin-top: 50px;*/
@@ -59,7 +85,6 @@ p {
     background-color: green; /*--var(--highlight-purple);*/
 }
 
-
 #about-me-holder {
     border: 0px black solid;
     border-radius: 10px;
@@ -68,10 +93,7 @@ p {
 
 }
 
-
-
 #about-me-holder p {
-    margin-bottom: 1em;
     line-height: 1.6em;
 }
 
@@ -84,15 +106,7 @@ p {
     margin-bottom: 25px;
 }
 
-
-#uw-logo {
-    margin-top: 20px;
-    max-height: 175px;
-    max-width: 175px;
-}
-
 #upwork-creds {
-    margin-top: 4em;
     background-color: rgb(42, 146, 238);
     padding-bottom: 2em;
     padding-top: 2em;
@@ -207,7 +221,6 @@ p {
     margin-bottom: 0.75em;
 }
 
-
 #experience-list-holder {
     margin-top: 2em;
 }
@@ -215,7 +228,6 @@ p {
 #experience-anchor {
     margin-bottom: 0.75em;
 }
-
 
 .work-header-row {
     background-color: rgb(236, 233, 233);
@@ -256,28 +268,6 @@ p {
 
 }
 
-
-
-/*  NOTE: Now replaced (can delete post cleanup)
-.subject-header h2{
-    background-color: rgb(188, 187, 187);
-    padding-top: 2em;
-    padding-bottom: 3em;
-}
-
-.subject-header p {
-    font-size: 1.33em;
-    background-color: rgb(236, 233, 233);
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-weight: 100;
-    max-width: 45em;
-    padding-left: 1em;
-    margin-top: -5.5em;
-}
-*/
-
-
 .preserve-whitespace {
     white-space: pre;
     line-height: 1em;
@@ -304,26 +294,6 @@ p {
     font-size: 1.25em;
     letter-spacing: 0.1em;
 }
-
-
-/*   NOTE: This is probably problem area for mobile (slides way too small)
-.carousel-inner {
-    padding-left: 7em;
-    padding-right: 7em;
-}
-*/
-
-/*.carousel-item container {
-    margin-top: 2em;
-    adding-top: 2em;
-}
-
-.carousel-item img-fluid {
-    max-width: 1%;
-}
-*/
-
-
 
 .slide-indent {
     margin-left: 2.5em;   /*5*/
@@ -363,8 +333,6 @@ p {
     margin-bottom: 2em;
 }
 
-
-
 /* Shadow / reflection effect */
 .pure-image {
     z-index: 2;
@@ -384,17 +352,12 @@ bottom: -0.1em;
   margin-bottom: 2em;
 }
 
-
-
 .shadowed-img {
     box-shadow: 0px 10px 9px black;
     margin-bottom: 3em;
     /*max-height: 1500px;
     max-width: 900px;*/
 }
-
-
-
 
 video {
     max-width: 80%;
