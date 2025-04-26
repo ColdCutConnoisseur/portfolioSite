@@ -132,11 +132,19 @@
 
     <div class="container-fluid portfolio-section-grid" id="web-apps-preview-grid">
       <div class="row grid-row">
-        <div class="col">
-          <div class="project-preview-box"></div>
+        <div class="col preview-col">
+          <a href="{{ url_for('show_web_app_projects') }}#tixInventorySection">
+            <div class="project-preview-box">
+              <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/tix_tracker_preview.png') }}" alt="tix-dash-preview">
+              <div class="hidden-overlay-name">Ticket Inventory Website</div>
+            </div>
+          </a>
         </div>
-        <div class="col">
-          <div class="project-preview-box"></div>
+        <div class="col preview-col">
+          <div class="project-preview-box">
+            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/llm_site_preview.png') }}" alt="llm-dash-preview">
+            <div class="hidden-overlay-name">LLM Query Website</div>
+          </div>
         </div>
         <div class="col">
           <div class="project-preview-box"></div>
@@ -151,7 +159,10 @@
     <div class="container-fluid portfolio-section-grid" id="desktop-apps-preview-grid">
       <div class="row grid-row">
         <div class="col">
-          <div class="project-preview-box"></div>
+          <div class="project-preview-box">
+            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/ib_trader_preview.png') }}" alt="freelance-trader-app-preview">
+            <div class="hidden-overlay-name">IB Trader & Backtester App</div>
+          </div>
         </div>
         <div class="col">
           <div class="project-preview-box"></div>
@@ -187,7 +198,10 @@
     <div class="container-fluid portfolio-section-grid" id="data-analysis-preview-grid">
       <div class="row grid-row">
         <div class="col">
-          <div class="project-preview-box"></div>
+          <div class="project-preview-box">
+            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/ncaa_hoops_predictor_chart.png') }}" alt="hoops-prediction-preview">
+            <div class="hidden-overlay-name">NCAA Hoops Predictor</div>
+          </div>
         </div>
         <div class="col">
           <div class="project-preview-box"></div>

@@ -39,6 +39,6 @@ def serve_testimonials():
     all_testimonials = Testimonial.query.all()
     return render_template("testimonials.html", all_testimonials=all_testimonials)
 
-#@app.route('/art-gallery')
-#def serve_gallery():
-#    return render_template("gallery.html")
+@app.route('/web-apps')
+def show_web_app_projects():
+    return render_template("web_apps.html")
