@@ -39,10 +39,18 @@ def serve_testimonials():
     all_testimonials = Testimonial.query.all()
     return render_template("testimonials.html", all_testimonials=all_testimonials)
 
-@app.route('/contact')
-def serve_contact():
-    return render_template("contact.html")
-
 @app.route('/web-apps')
 def show_web_app_projects():
     return render_template("web_apps.html")
+
+@app.route('/trading-apps')
+def show_trading_app_projects():
+    return render_template("trading_apps.html")
+
+@app.route('/desktop-apps')
+def show_desktop_app_projects():
+    return render_template("desktop_apps.html")
+
+@app.route('/stats-and-modeling-apps')
+def show_stats_app_projects():
+    return render_template("stats_apps.html")

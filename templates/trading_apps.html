@@ -1,0 +1,329 @@
+{% extends "base.html" %}
+{% block page_title %}Trading Apps{% endblock %}
+
+{% block intro_active %}active{% endblock %}
+
+{% block custom_page_css %} {{url_for('static', filename='/css/intro.css')}} {% endblock %}
+
+{% block aria_intro_active %}aria-current="page"{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container-fluid">
+    <div class="row work-header-row align-items-center">
+      <div class="col-12 col-md-4 work-category-header">
+        <h2 id="auto-trading-anchor">Automated Trading & Strategy Development</h2>
+      </div>
+      <div class="col-12 col-md-8 work-category-description">
+          <div class="white-background-card shadow-lg">
+            <p>Here's some of the strategy development work I've done & an example of an automated trading setup I employ myself.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trading Accordion -->
+  <div class="accordion mx-auto" id="trading-portfolio-accordian">
+
+    <!--IB Trading Application & Backtester-->
+    <div class="accordion-item" id="ib-trader-begin">
+
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTraderDemo" aria-expanded="true" aria-controls="collapseTraderDemo">
+          Python Trader and Backtester for Interactive Brokers
+        </button>
+      </h2>
+
+      <div id="collapseTraderDemo" class="accordion-collapse collapse show" data-bs-parent="#trading-portfolio-accordian">
+        <div class="accordion-body">
+
+          <h4>About</h4>
+
+          <p class="about-p">This project bundled: <br>
+            <ul>
+              <li>an API connection to Interactive Brokers for sending and querying orders as well as fetching market data.</li>
+              <li>a trade strategy class, allowing for writing and easily configuring custom trade strategies.</li>
+              <li>charting functionality for displaying both historical and live data as well as trade indicator overlays.</li>
+              <li>functionality for trading in simulation versus live trading.</li>
+              <li>and a graphical user interface to tie everything together, complete with a separate configuration page.</li>
+            </ul>
+
+            <br>
+            <br>
+
+            As an add on, the same underlying app skeleton was also later used to create a backtester application.
+              The trade backtester allowed a user to run a specified
+            trade strategy over historical data to see how the strategy would have performed during that time period.  Backtesters are typically employed
+            in order to decide whether or not to run a new trading strategy.
+
+            <br>
+            <br>
+
+            The backtester app has functionality for plotting the historical data over the specified time period and configured data resolution, and
+            also includes peripheral functionality like plotting trade take-profits and stops on the chart, plotting trade indicator objects,
+            and has helper functions that allow for the user to step through market data updates or skip to notable events like
+            trade setups, order sends, order fills, order cancels, trade exits, etc.  It also has a summary printout providing statistics like percentage of
+            winning / losing trades, etc, etc.
+          </p>
+
+          <div id="customTraderCarousel" class="carousel slide">
+            <div class="carousel-inner container-fluid text-center">
+
+              <div class="carousel-item active">
+                  <!--<img src="{{ url_for('static', filename='images/custom_trading_app/trader_app_overview.png')}}" class="d-block w-100 image-shadow" alt="trader-app-demo-shadow">-->
+                  <img src="{{ url_for('static', filename='images/custom_trading_app/trader_app_overview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="trader-app-demo">
+
+                  <div class="container">
+
+                    <h5>Trader App Overview</h5>
+                    <p>Here's an overview of the 'trader' application.  It has functionality for connecting to the broker and streaming live data,
+                      calculating internal strategy metrics, plotting of historical + live data + chart objects for indicators that the
+                      underlying trade strategy considers.  Additionally, peripheral functionality exists to change the charting & data resolution (1 min bars, 5min, 10 min, etc) and
+                      functionality to save candle data as a .csv file, and a configuration page.
+                    </p>
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/trader_config_overview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="trader-config-page">
+                <div class="container">
+                  <h5>Trader Application Configuration</h5>
+                  <p>Here's a closer look at the configuration page.  Aesthetics were sacrificd in favor of lower costs here.
+                  This page allows the user change settings such as what assets to trade, the different strategy overlays and signals to show
+                  and/or consider within the overall trade strategy when the application is live and running, and allows the user to define,
+                  plot, and trade multiple different trade sessions (US, UK, ASIA, etc).</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/composite_indicators.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="blank-tester">
+                <div class="container">
+                  <h5>Various Strategy Indicator Objects</h5>
+                  <p> Here's a composite showing different types of indicator objects that the application can track and plot.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/backtester_init.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="blank-tester">
+                <div class="container">
+                  <h5>Backtester App</h5>
+                  <p>The backtester application is essentially a fork of the trader app, using a similar strucuture and setup.
+                    It differs however, in that it allows for testing the configured trade strategy over historical data, and it also exposes
+                    additional functionality that allows for a stepthrough of the historical data and trades.
+                    It also displays the computed trade indicators and profit / loss levels for quick visual highlighting of past trades.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/backtester_visual_overview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="tester-overview-output">
+                <div class="container">
+                  <h5>Trade Overview</h5>
+                  <p>After the backtester has run over the historical data, it will show a visual overview of the trade performance.  With trade plots
+                    (highlighted in pink) showing profit and stop-loss levels over the period of the trade.  The first highlighted trade is a long trade and
+                    the second, a short.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/backtest_raw_output.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="raw-bt-output">
+                <div class="container">
+                  <h5>Performance Output</h5>
+                  <p>The backtester will also provide a summary output.  This summary provides stats regarding strategy performance, order sends, fills,
+                    cancels, etc.  Again, left barebones just as a terminal printout to cut down on costs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/trade_jump_back.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="jump-back">
+                <div class="container">
+                  <h5>Jump to Individual Trades</h5>
+                  <p>The backtester exposes functionality to allow the user to jump to the setup or start of each individual trade in order to
+                    better inspect trade setups.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/step_forward.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="step-thru">
+                <div class="container">
+                  <h5>Step Through Updates</h5>
+                  <p>Additionally, the backtester allows you to step through each individual market update to see the progression of a trade.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/custom_trading_app/trade_step_forward.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="step-back">
+                <div class="container">
+                  <h5>Step Backward Through Updates</h5>
+                  <p>Conversely, the backtester also allows you to step backward through updates to review trades and market conditions.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#customTraderCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#customTraderCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+            <div class="slide-indent">
+
+              <h3>What I Used:</h3>
+              <ul>
+                <li><code>Requests</code> for broker connection (orders and market data)</li>
+                <li><code>PyQt6</code> for the desktop app's user interface</li>
+                <li><code>pyqtgraph</code> for graphing and creating custom object plots for trade indicators</li>
+                <li><code>cProfile</code> to help find areas to address for performance improvements </li>
+              </ul>
+
+              <h3>What I Learned:</h3>
+              <p>This was the first time I used <code>pyqtgraph</code>.  It's an awesome package that was really helpful in
+              allowing me to create custom chart objects for each of the individual indicators and trade entries/exits used on the chart.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion-item" id="tradingview-auto-app">
+
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          TradingView Strategy & Automating Broker Execution
+        </button>
+      </h2>
+
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#trading-portfolio-accordian">
+        <div class="accordion-body">
+
+          <h4>About</h4>
+
+          <p class="about-p">I've created hundreds of TradingView indicators, strategies, and libraries using TV's native scripting language, <code>pinescript</code>.
+          Here's an example of a strategy that I previously employed paired with trading software that I wrote.  The software takes signals emitted by the charting platform (TV),
+          translates those signals into actionable trades, and then forwards those trades to a configured broker for execution.  Trades are then monitored for
+          updates such as fills, exits, and changes in the profit & loss total and the GUI is updated appropriately.
+          </p>
+
+          <div id="tradingCarousel" class="carousel slide">
+            <div class="carousel-inner container-fluid text-center">
+
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/nick_strategy.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="my-strategy">
+                <div class="container">
+                  <h5>Example TradingView Strategy</h5>
+                  <p>Here's an overlay of a TradingView strategy I use for buying equities off of previous or current session lows (simplified).
+                    I created it with TradingView's scripting language, <code>Pinescript</code>.
+                    A cool feature of the TradingView software is that it employs callbacks or webhooks for whenever
+                    a trade occurs per the coded strategy.  This allows you to easily forward data and talk to other applications in the event
+                    that a trade occurs.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/new_signals.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="signals-dash">
+                <div class="container">
+                  <h5>API and Dashboard</h5>
+                  <p>Here's a barebones API + dashboard (only purpose is really just a quick visual confirmation that everything is working) I created with python's flask framework and host for free on pythonanywhere.com.
+                    I set the TradingView webhooks to the API call of that website that adds trade signals to a database within this flask app.
+                    I set the payload from TradingView's side to include attributes like trade direction, quantity, price,
+                    and an API key used for authentication purposes (so that trades can't be spoofed by others).
+                    Whenever new signals are posted and unprocessed, they are displayed on this dashboard page simply as a timestamp of when they occurred.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/trader_dash.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="trader-dash">
+                <div class="container">
+                  <h5>Desktop App</h5>
+                  <p>This app handles all authentication on the broker side, as well as functionality that continues to refresh authentication as tokens near expiration.  This ensures that
+                    the session does not go stale or that the user is not logged out during a trade session.
+                    The app then subscribes to market streams for any equities set to trade in the app's configuration.  I use a python requests stream / session object
+                    to handle market update messages and keep a current orderbook for anything I am trading.
+                    A separate thread is started and a timeout occurs every (configured) few seconds.  On a timeout,
+                    the application will poll the flask app to see if any new trade signals have arrived since the last poll.
+                    If a new signal has occurred, the app translates, formats, and sends a new order to my broker's API.
+                    An audit trail is provided both in the 'Processed Signals' and the 'Trade Review' windows.
+                    My trading exposure is then updated in the 'Open Positions' window.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/ts_dash.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="ts-dash">
+                <div class="container">
+                  <h5>Broker API Execution</h5>
+                  <p>Here an open trade is reflected on the broker's side.  It remains open until an exit call is received by my trading application.
+                    Again this is forwarded by the underlying TradingView strategy and passed on to my API / database by webhook.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/example_trader_app.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="facelift">
+                <div class="container">
+                  <h5>App Facelift</h5>
+                  <p>Messing around with PyQt stylesheets to change the colors / formatting of the application--this is something I haven't extensively used in the past.  Typically,
+                    when altering the styles of pyqt objects or widgets, I have just manipulated each object's individual stylesheet, versus the approach of using a global stylesheet.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#tradingCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#tradingCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+            <div class="slide-indent">
+              <h3>What I Used:</h3>
+              <ul>
+                <li>TradingView <code>Pinescript</code></li>
+                <li><code>Insomnia</code> for testing API calls and endpoints.</li>
+                <li><code>Flask</code> for the API and dashboard.</li>
+                <li><code>Requests</code> for market streams and orders.</li>
+                <li><code>Sqlite</code> for holding trade signals received by the API and tracking their state.</li>
+                <li><code>PyQt6</code> for the desktop app's user interface.</li>
+              </ul>
+
+              <h3>What I Learned:</h3>
+              <p>This was my first time working with an authentication that utilized refresh tokens, where authenitcation had to be continuously run on timemouts
+                to ensure that the user stayed logged in for the entirety of the trade session.</p>
+              <p>I was also impressed with the performance of this application being that it is written in python; the app allows for better execution in terms of time & price than I had originally imagined it would.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+{% endblock %}
