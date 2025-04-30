@@ -169,7 +169,12 @@
           </div>
         </div>
         <div class="col-12 col-xxl-4 preview-col">
-          <div class="project-preview-box"></div>
+          <a href="{{ url_for('show_stats_app_projects') }}#coinbase-pricer-app">
+            <div class="project-preview-box">
+              <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/cb_pricer_preview.png') }}" alt="coin-dash-preview">
+              <div class="hidden-overlay-name">Coin Predictor Web App</div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -182,7 +187,7 @@
     <div class="container-fluid portfolio-section-grid" id="desktop-apps-preview-grid">
       <div class="row grid-row">
 
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <a href="{{ url_for('show_desktop_app_projects') }}#parser-app-begin">
             <div class="project-preview-box">
               <img class="project-preview-img" src="{{url_for('static', filename='images/odb_parser_app/group_sum_demo.gif')}}" alt="pdf-parser-preview">
@@ -191,7 +196,7 @@
           </a>
         </div>
 
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <a href="{{ url_for('show_desktop_app_projects') }}#compensation-app-begin">
             <div class="project-preview-box">
               <img class="project-preview-img" src="{{url_for('static', filename='images/odb_app_images/app_main_tab.png')}}" alt="comp-app-preview">
@@ -200,7 +205,7 @@
           </a>
         </div>
 
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <a href="{{ url_for('show_desktop_app_projects') }}#auto-sports-b-app-preview">
           <div class="project-preview-box">
             <img class="project-preview-img" src="{{url_for('static', filename='images/project_previews/sports_b_preview.png')}}" alt="auto-sports-betting-preview">
@@ -211,6 +216,7 @@
 
       </div>
     </div>
+    <div class="preview-spacer"></div>
   </div>
 
   <div class="container-fluid preview-container">
@@ -218,23 +224,28 @@
 
     <div class="container-fluid portfolio-section-grid" id="data-analysis-preview-grid">
       <div class="row grid-row">
-        <div class="col preview-col">
-          <div class="project-preview-box">
-            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/coin_preview.png') }}" alt="cb-prediction-preview">
-            <div class="hidden-overlay-name">Coinbase Price Predictor</div>
-          </div>
+        <div class="col-12 col-xxl-4 preview-col">
+          <a href="{{ url_for('show_stats_app_projects') }}#coinbase-pricer-app">
+            <div class="project-preview-box">
+              <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/coin_preview.png') }}" alt="cb-prediction-preview">
+              <div class="hidden-overlay-name">Coinbase Price Predictor</div>
+            </div>
+          </a>
         </div>
-        <div class="col preview-col">
-          <div class="project-preview-box">
-            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/ncaa_hoops_predictor_chart.png') }}" alt="hoops-prediction-preview">
-            <div class="hidden-overlay-name">NCAA Hoops Predictor</div>
-          </div>
+        <div class="col-12 col-xxl-4 preview-col">
+          <a href="{{ url_for('show_stats_app_projects') }}#hoops-predictor-section">
+            <div class="project-preview-box">
+              <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/ncaa_hoops_predictor_chart.png') }}" alt="hoops-prediction-preview">
+              <div class="hidden-overlay-name">NCAA Hoops Predictor</div>
+            </div>
+          </a>
         </div>
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <div class="project-preview-box"></div>
         </div>
       </div>
     </div>
+    <div class="preview-spacer"></div>
   </div>
 
   <div class="container-fluid preview-container">
@@ -243,7 +254,7 @@
     <div class="container-fluid portfolio-section-grid" id="trading-software-preview-grid">
       <div class="row grid-row">
 
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <a href="{{ url_for('show_trading_app_projects') }}#ib-trader-begin">
             <div class="project-preview-box">
               <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/ib_trader_preview.png') }}" alt="ib-trader-preview-again">
@@ -252,7 +263,7 @@
           </a>
         </div>
        
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <a href="{{ url_for('show_trading_app_projects') }}#tradingview-auto-app">
             <div class="project-preview-box">
               <img class="project-preview-img" src="{{ url_for('static', filename='images/example_trader_app.png')}}" alt="ts-desktop-app-preview">
@@ -261,12 +272,13 @@
           </a>
 
         </div>
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <div class="project-preview-box">
           </div>
         </div>
       </div>
     </div>
+    <div class="preview-spacer"></div>
   </div>
 
   <div class="container-fluid preview-container">
@@ -274,13 +286,21 @@
 
     <div class="container-fluid portfolio-section-grid" id="web-automation-preview-grid">
       <div class="row grid-row">
-        <div class="col">
-          <div class="project-preview-box"></div>
+        <div class="col-12 col-xxl-4 preview-col">
+          <a href="{{ url_for('show_web_app_projects') }}#nfl-psl-section">
+            <div class="project-preview-box">
+              <img class="project-preview-img" src="{{ url_for('static', filename='images/psl_app/vikings_marketplace.png')}}" alt="nfl-psl-preview">
+              <div class="hidden-overlay-name">NFL Personal Seat License Tracker & Notifier</div>
+            </div>
+          </a>
         </div>
-        <div class="col">
-          <div class="project-preview-box"></div>
+        <div class="col-12 col-xxl-4 preview-col">
+          <div class="project-preview-box">
+            <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/uniswap_roller_preview.png')}}" alt="uniswap-lp-position-auto-roller">
+            <div class="hidden-overlay-name">Uniswap AutoRoller & AutoHedger</div>
+          </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-xxl-4 preview-col">
           <div class="project-preview-box"></div>
         </div>
       </div>
