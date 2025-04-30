@@ -55,77 +55,39 @@
             <div class="container-fluid" id="experience-list-holder">
               <!--<h2 id="experience-anchor">General Experience</h2>-->
 
-              <section class="skills-section">
-                <h2>Skills & Experience</h2>
-                <div class="skills-grid">
-                  <span class="skill-tag">Web Development</span>
-                  <span class="skill-tag">API Development & Testing</span>
-                  <span class="skill-tag">Version Control (Git)</span>
-                  <span class="skill-tag">Containerization (Docker)</span>
-                  <span class="skill-tag">Cloud Computing (AWS, GCP)</span>
-                  <span class="skill-tag">Authentication & Authorization</span>
-                  <span class="skill-tag">Database Management (SQL)</span>
-                  <span class="skill-tag">Testing & QA</span>
-                  <span class="skill-tag">Workflow Automation</span>
-                  <span class="skill-tag">Web Scraping</span>
-                  <span class="skill-tag">Desktop App Development</span>
-                  <span class="skill-tag">Custom Software Design</span>
-                  <span class="skill-tag">PDF Parsing</span>
-                  <span class="skill-tag">Script Utilities</span>
-                  <span class="skill-tag">Profiling & Optimization</span>
-                  <span class="skill-tag">UI/UX Design</span>
-                  <span class="skill-tag">Smart Contracts</span>
-                  <span class="skill-tag">Blockchain & Web3</span>
-                  <span class="skill-tag">LLMs & AI Prompting</span>
-                  <span class="skill-tag">Regular Expressions</span>
-                  <span class="skill-tag">Query Languages</span>
-                </div>
-              </section>
-
-              <!--
-
               <div class="row justify-content-around" id="exp-list-grouping">
                 <div class="col-8 col-sm-4 mx-auto">
                   <ul class="exp-list" id="experience-list">
-                    <li>graphical user interfaces</li>
-                    <li>profiling</li>
-                    <li>unittesting</li>
-                    <li>version control</li>
-                    <li>virtual machines / cloud computing instances</li>
-                    <li>executable creation</li>
-                    <li>relational databases</li>
-                    <li>database migration</li>
-                    <li>desktop application development</li>
-                    <li>data validation & QA testing</li>
-                    <li>web & mobile design</li>
-                    <li>blockchain, cryptocurrency, web3, etc, etc</li>
-                    <li>authentication</li>
-                    <li>custom software design and development</li>
+                    <li>Web Development</li>
+                    <li>API Development & Testing</li>
+                    <li>Version Control</li>
+                    <li>Containerization</li>
+                    <li>Cloud Computing</li>
+                    <li>Authentication & Authorization</li>
+                    <li>Database Management</li>
+                    <li>Testing & QA</li>
+                    <li>Workflow Automation</li>
+                    <li>Web Scraping</li>
+                    <li>Desktop App Development</li>
+                    <li>Custom Software Design</li>
                   </ul>
                 </div>
 
                 <div class="col-8 col-sm-4 mx-auto">
                   <ul class="exp-list" id="experience-list2">
-                    <li>web development</li>
-                    <li>scripts & utilities</li>
-                    <li>web scraping and automation</li>
-                    <li>API creation and testing</li>
-                    <li>cloud computing and hosted services</li>
-                    <li>containerization</li>
-                    <li>smart contract creation, testing, and deployment</li>
-                    <li>workflow automation</li>
-                    <li>task scheduling</li>
-                    <li>regular expressions</li>
-                    <li>large language models</li>
-                    <li>pdf parsing</li>
-                    <li>query languages</li>
-                    <li>AI / LLM prompting</li>
+                    <li>PDF Parsing</li>
+                    <li>Scripts & Utilities</li>
+                    <li>Profiling & Optimization</li>
+                    <li>Smart Contracts (Solidity)</li>
+                    <li>Blockchain & Web3</li>
+                    <li>LLMs & AI Prompting</li>
+                    <li>Regular Expressions</li>
+                    <li>Query Languages</li>
+                    <li>UI/UX Design (Working on this, relax)</li>
                   </ul>
                 </div>
 
               </div>
-
-            -->
             </div>
 
           </div>
@@ -192,7 +154,7 @@
 
     <div class="container-fluid portfolio-section-grid" id="web-apps-preview-grid">
       <div class="row grid-row">
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <a href="{{ url_for('show_web_app_projects') }}#tixInventorySection">
             <div class="project-preview-box">
               <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/tix_tracker_new_preview.png') }}" alt="tix-dash-preview">
@@ -200,17 +162,18 @@
             </div>
           </a>
         </div>
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <div class="project-preview-box">
             <img class="project-preview-img" src="{{ url_for('static', filename='images/project_previews/llm_site_preview.png') }}" alt="llm-dash-preview">
             <div class="hidden-overlay-name">LLM Query Website</div>
           </div>
         </div>
-        <div class="col preview-col">
+        <div class="col-12 col-xxl-4 preview-col">
           <div class="project-preview-box"></div>
         </div>
       </div>
     </div>
+    <div class="preview-spacer"></div>
   </div>
 
   <div class="container-fluid preview-container">

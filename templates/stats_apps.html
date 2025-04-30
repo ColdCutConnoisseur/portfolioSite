@@ -52,92 +52,19 @@
               <div class="carousel-item">
                 <img src="{{ url_for('static', filename='images/pacer_app/pacer_opportunity_pregame.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="ncaa-pregame-predictions">
                 <div class="container">
-                  <h5>Trader Application Configuration</h5>
-                  <p>Here's a closer look at the configuration page.  Aesthetics were sacrificd in favor of lower costs here.
-                  This page allows the user change settings such as what assets to trade, the different strategy overlays and signals to show
-                  and/or consider within the overall trade strategy when the application is live and running, and allows the user to define,
-                  plot, and trade multiple different trade sessions (US, UK, ASIA, etc).</p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/custom_trading_app/composite_indicators.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="blank-tester">
-                <div class="container">
-                  <h5>Various Strategy Indicator Objects</h5>
-                  <p> Here's a composite showing different types of indicator objects that the application can track and plot.
-                  </p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/custom_trading_app/backtester_init.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="blank-tester">
-                <div class="container">
-                  <h5>Backtester App</h5>
-                  <p>The backtester application is essentially a fork of the trader app, using a similar strucuture and setup.
-                    It differs however, in that it allows for testing the configured trade strategy over historical data, and it also exposes
-                    additional functionality that allows for a stepthrough of the historical data and trades.
-                    It also displays the computed trade indicators and profit / loss levels for quick visual highlighting of past trades.
-                  </p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/custom_trading_app/backtester_visual_overview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="tester-overview-output">
-                <div class="container">
-                  <h5>Trade Overview</h5>
-                  <p>After the backtester has run over the historical data, it will show a visual overview of the trade performance.  With trade plots
-                    (highlighted in pink) showing profit and stop-loss levels over the period of the trade.  The first highlighted trade is a long trade and
-                    the second, a short.
-                  </p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/custom_trading_app/backtest_raw_output.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="raw-bt-output">
-                <div class="container">
-                  <h5>Performance Output</h5>
-                  <p>The backtester will also provide a summary output.  This summary provides stats regarding strategy performance, order sends, fills,
-                    cancels, etc.  Again, left barebones just as a terminal printout to cut down on costs.
-                  </p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/custom_trading_app/trade_jump_back.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="jump-back">
-                <div class="container">
-                  <h5>Jump to Individual Trades</h5>
-                  <p>The backtester exposes functionality to allow the user to jump to the setup or start of each individual trade in order to
-                    better inspect trade setups.
-                  </p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/custom_trading_app/step_forward.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="step-thru">
-                <div class="container">
-                  <h5>Step Through Updates</h5>
-                  <p>Additionally, the backtester allows you to step through each individual market update to see the progression of a trade.
-                  </p>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/custom_trading_app/trade_step_forward.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="step-back">
-                <div class="container">
-                  <h5>Step Backward Through Updates</h5>
-                  <p>Conversely, the backtester also allows you to step backward through updates to review trades and market conditions.
-                  </p>
+                  <h5>Evolution to Shot Models & Pregame Predictions</h5>
+                  <p></p>
                 </div>
               </div>
 
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#customTraderCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#PointsPacerCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
 
-            <button class="carousel-control-next" type="button" data-bs-target="#customTraderCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#PointsPacerCarousel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -146,10 +73,9 @@
 
               <h3>What I Used:</h3>
               <ul>
-                <li><code>Requests</code> for broker connection (orders and market data)</li>
-                <li><code>PyQt6</code> for the desktop app's user interface</li>
-                <li><code>pyqtgraph</code> for graphing and creating custom object plots for trade indicators</li>
-                <li><code>cProfile</code> to help find areas to address for performance improvements </li>
+                <li><code>Selenium</code> for crawling espn stats pages and fetching data for the database</li>
+                <li><code>MySql</code> for the database to hold stats</li>
+                <li><code>scikit-learn</code> for machine learning models</li>
               </ul>
 
               <h3>What I Learned:</h3>
