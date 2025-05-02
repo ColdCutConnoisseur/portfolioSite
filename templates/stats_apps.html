@@ -217,44 +217,65 @@
 
           <h4>About</h4>
 
-          <p class="about-p">This is a regression / relative value setup (pairs trade too) for pricing shares of Coinbase stock provided current market context, such as the price of gold, cryptocurrencies,
+          <p class="about-p">This is a relative value setup for pricing shares of Coinbase stock provided current market context, such as the price of gold, cryptocurrencies,
             and equity index futures.  It attempts to take advantage of price discrepencies between the current market and what the model suggests is the 'appropriate' value.  When a 
-            large enough residual, or difference between the two prices exist, the goal is to either short or long Coinbase stock and take an opposing hedge position in BTC, until the predicted and actual value
-            converge.
+            large enough residual, or difference between the two prices exist, the goal is to either short or long Coinbase stock and take an opposing hedge position in BTC.  These positions
+            are held until the predicted and actual value converge or a stop loss is reached.
           </p>
 
           <div id="CBCarousel" class="carousel slide">
             <div class="carousel-inner container-fluid text-center">
 
               <div class="carousel-item active">
-                <img src="{{ url_for('static', filename='images/coin_pricer_app/threshold_broken.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="residual-break">
+                <img src="{{ url_for('static', filename='images/project_previews/coin_preview.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-full-prediction-chart">
                 <div class="container">
-                  <h5>Current Setup</h5>
-                  <p>Here's a residual break.  Basically the price difference between the model and reality differ by a pretty large margin.  This is a setup to short COIN and Buy BTC as a hedge.  Effectively,
-                    Coinbase is overvalued at these levels given the current market context.  The +BTC hedge is to guard against a large upswing in BTC price, taking COIN further up with it.
-                    Updates to come...(or this whole thing gets deleted, we'll find out this week).
+                  <h5>Overview</h5>
+                  <p>Here's a chart of the price of Coinbase stock going all the way back to the last quarter of 2022.  The solid blue series is the price of Coinbase stock and
+                    the orange, dashed series represents the regression model's prediction of where the price of Coinbase stock should be given details about the current, broader market.
                   </p>
                 </div>
               </div>
 
-              <!--
               <div class="carousel-item">
-                <img src="" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/current_COIN_setup.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="residual-break">
                 <div class="container">
-                  <h5></h5>
-                  <p></p>
+                  <h5>Visualization of a Setup</h5>
+                  <p>Here's a zoomed-in view of the previous chart showing an existing trade setup.  Basically the price difference between the model (orange) and reality (blue) have diverged by a substantial amount.  This is a setup to short COIN and Buy BTC as a hedge.  Effectively,
+                  Coinbase is overvalued at these levels given the current market context.  The +BTC hedge is to guard against a large upswing in BTC price, taking COIN further up with it (The two are heavily correlated because Coinbase's 
+                  revenue is very correlated with BTC performance).
+                  </p>
                 </div>
               </div>
 
               <div class="carousel-item">
-                <img src="" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/threshold_broken.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="threshold-visualizations">
                 <div class="container">
-                  <h5></h5>
-                  <p>
+                  <h5>Breaking the Threshold</h5>
+                  <p>Here's another way to visualize the residual break.  We're looking for the price differential to exceed +/- 16 dollars (per share).  If the
+                    a residual exists that exceeds those thresholds, a trade is opened.
                   </p>
                 </div>
               </div>
-              -->
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/initial_break.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-price-return">
+                <div class="container">
+                  <h5>Favorable Movement</h5>
+                  <p>The price of COIN stock had reached a $211 handle and the previous graph showed a differential of about 20.  Here's a movement in COIN's price back towards the predicted level.  So this move was
+                    from $211 down to about $197.50.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/small_convergence.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-price-return-v-prediction">
+                <div class="container">
+                  <h5>Original Chart</h5>
+                  <p>And this visualized in the original plot.  So there has been a convergence, but a substantial gap between the two still exists.  This isn't a completed trade as
+                    the current model waits for a convergence back to 0.  We'll see how this one continues to progress...
+                  </p>
+                </div>
+              </div>
 
             </div> <!--Close Tag-->
 
