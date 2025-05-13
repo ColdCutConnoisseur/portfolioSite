@@ -232,17 +232,17 @@
                   <h5>Overview</h5>
                   <p>Here's a chart of the price of Coinbase stock going all the way back to the last quarter of 2022.  The solid blue series is the price of Coinbase stock and
                     the orange, dashed series represents the regression model's prediction of where the price of Coinbase stock should be given details about the current, broader market.
+                    Think of this as a more smoothed or averaged out price of COIN's stock.
                   </p>
                 </div>
               </div>
 
               <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/coin_pricer_app/current_COIN_setup.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="residual-break">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/residual_distribution.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-model-residual-distribution">
                 <div class="container">
-                  <h5>Visualization of a Setup</h5>
-                  <p>Here's a zoomed-in view of the previous chart showing an existing trade setup.  Basically the price difference between the model (orange) and reality (blue) have diverged by a substantial amount.  This is a setup to short COIN and Buy BTC as a hedge.  Effectively,
-                  Coinbase is overvalued at these levels given the current market context.  The +BTC hedge is to guard against a large upswing in BTC price, taking COIN further up with it (The two are heavily correlated because Coinbase's 
-                  revenue is very correlated with BTC performance).
+                  <h5>Residual Distribution</h5>
+                  <p>Here's the distribution of each observation's prediction versus the actual close price of COIN.  The model will set a threshold somewhere
+                    between +/- 10 to 20 for trade entry signals.
                   </p>
                 </div>
               </div>
@@ -251,8 +251,20 @@
                 <img src="{{ url_for('static', filename='images/coin_pricer_app/threshold_broken.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="threshold-visualizations">
                 <div class="container">
                   <h5>Breaking the Threshold</h5>
-                  <p>Here's another way to visualize the residual break.  We're looking for the price differential to exceed +/- 16 dollars (per share).  If the
-                    a residual exists that exceeds those thresholds, a trade is opened.
+                  <p>Here's another way to visualize the distribution of residuals and the threshold set around +/- 16.  The most recent observations (on the righthand side),
+                    illustrate a residual break and a slight snap back.  For each of these opportunities we're effectively looking for the price differential to exceed +/- 16 dollars (per share).  If the
+                    difference between the close price of COIN and the model's predicted value exceeds those thresholds, a trade is opened.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/current_COIN_setup.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="residual-break">
+                <div class="container">
+                  <h5>Visualization of a Setup</h5>
+                  <p>Here's a zoomed-in view of the initial chart showing an existing trade setup.  Basically the price difference between the model (orange) and reality (blue) have diverged by a substantial amount.  This is a setup to short COIN and Buy BTC as a hedge.  Effectively,
+                  Coinbase is overvalued at these levels given the current market context.  The +BTC hedge is to guard against a large upswing in BTC price, taking COIN further up with it (The two are heavily correlated because Coinbase's 
+                  revenue is very correlated with BTC performance).
                   </p>
                 </div>
               </div>
@@ -273,6 +285,38 @@
                   <h5>Original Chart</h5>
                   <p>And this visualized in the original plot.  So there has been a convergence, but a substantial gap between the two still exists.  This isn't a completed trade as
                     the current model waits for a convergence back to 0.  We'll see how this one continues to progress...
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/new_opp_graph_view.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="new-coinbase-trade">
+                <div class="container">
+                  <h5>Flipped Opportunity</h5>
+                  <p>Ok, so there was some convergence on the previous trade setup.  But I would chalk that opportunity up to a capitulation / loser, as
+                    there should be an absolute convergence to something closer to 0.  This opportunity seemed to exist for an amount of time greater than I would
+                    have liked to see, and the greatest convergence between the model's price and COIN's close was still a difference of ~$6.
+
+                    With the recent backdrop of rising crypto prices (Bitcoin back above $100k and ETH up from like $1800 to $2500), this illustrates the importance
+                    of the other side of the trade (the crypto hedge).  The strategy would've lost money on the COIN short (unless an early exit was taken), but made money on the BTC long.  The large movement in underlying crypto
+                    prices was so substantial that it actually flipped the opportunity according to the
+                    regression model to a long COIN / Short BTC.  The above graph shows the new gap / flip.  The regression model (dashed, orange line) is about $28 above
+                    the most recent COIN daily close.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/coin_pop_after_hours.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-after-hours-chart">
+                <div class="container">
+                  <h5>After Hours Pop</h5>
+                  <p>Here's a pretty substantial after-hours movement in COIN's price.  Up to about $230 from a $207 close versus the regression model's price of $235.
+                    This seems to be a reoccurring theme--that these price adjustments are not occurring during normal trading hours, but are reflected in after-hours trading.
+
+                    It's also important to disclose that COIN joined the S&P 500 today, replacing Discover Financial.  That's some positive news, but again, this large move occurred 
+                    after hours and not during normal market hours.
+
+                    Another theme has been these large after-hours moves being undone on the next trading day's open, so we'll see if this holds up tomorrow.
                   </p>
                 </div>
               </div>
