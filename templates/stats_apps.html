@@ -296,9 +296,13 @@
                   <p>Ok, so there was some convergence on the previous trade setup.  But I would chalk that opportunity up to a capitulation / loser, as
                     there should be an absolute convergence to something closer to 0.  This opportunity seemed to exist for an amount of time greater than I would
                     have liked to see, and the greatest convergence between the model's price and COIN's close was still a difference of ~$6.
-
+                    <br>
+                    <br>
                     With the recent backdrop of rising crypto prices (Bitcoin back above $100k and ETH up from like $1800 to $2500), this illustrates the importance
-                    of the other side of the trade (the crypto hedge).  The strategy would've lost money on the COIN short (unless an early exit was taken), but made money on the BTC long.  The large movement in underlying crypto
+                    of the other side of the trade (the crypto hedge).  The strategy would've lost money on the COIN short (unless an early exit was taken), but made money on the BTC long.
+                    <br>
+                    <br>
+                    The large movement in underlying crypto
                     prices was so substantial that it actually flipped the opportunity according to the
                     regression model to a long COIN / Short BTC.  The above graph shows the new gap / flip.  The regression model (dashed, orange line) is about $28 above
                     the most recent COIN daily close.
@@ -320,6 +324,38 @@
                   </p>
                 </div>
               </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/price_spot_on.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-price-convergence">
+                <div class="container">
+                  <h5>Full Convergence</h5>
+                  <p>Woo hoo! And a full on convergence on session open the following day.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/convergence_plus_overshoot.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-price-convergence-graph">
+                <div class="container">
+                  <h5>Convergence on Graph</h5>
+                  <p>Here's the graph view once again after the convergence.  As a refresher (I think 3 slides back), the orange line led, suggesting a spike in COIN price.  Here we see the blue series
+                    has caught up to and even overshot post convergence.  This graph and screenshot was taken at session close (after COIN decided to keep ripping).  See the next slide
+                    for more info.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/coin_pricer_app/overshoot_later.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="coinbase-price-overshoot">
+                <div class="container">
+                  <h5>Price Overshoot</h5>
+                  <p>And later in the session, COIN ended up ripping right through the convergence price (almost to the extent that this was a signal to open a trade on the other side & short COIN back down to a 
+                    $240 level).
+                  </p>
+                </div>
+              </div>
+
+
 
             </div> <!--Close Tag-->
 
