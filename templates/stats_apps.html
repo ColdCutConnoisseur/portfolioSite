@@ -88,9 +88,9 @@
                 <div class="container">
                   <h5>Building Observations</h5>
                   <p>I then had another script that would take the event_id mapping and visit each of the play-by-play pages for that game.  The script would walk through all game updates
-                    within the play-by-play table for each half and create an observation at each point in time that a game update occured, reflecting the current stats of the specific team,
+                    within the play-by-play table for each half.  For each updpate, an observation was recorded reflecting the current stats of the specific team,
                     for that specific game, at that specific point in time.  In the terminal printout above, you can see the printout of each handled game update and the respective final stats
-                    dictionaries that result after all game updates are handled.  This is an illustration of what is basically recorded at the occurrance of each game update (the dictionary at that point in time).
+                    dictionaries that result after all game updates are handled.  This is an illustration of what is basically recorded at the occurrance of each game update (it's just this very dictionary at that point in time).
                   </p>
                 </div>
               </div>
@@ -99,14 +99,20 @@
                 <img src="{{ url_for('static', filename='images/pacer_app_images/logo_mapping.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="ncaa-team-logo-mapping">
                 <div class="container">
                   <h5>Problems Faced</h5>
-                  <p>A reoccurring problem I faced was being able to accurately differentiate which game update belonged to which team.  From the previous screenshots, it looks like this logic would be simple,
-                    but the underlying html did not carry any info on which update belonged to which team.  Initially all methods of telling which game update belonged to which team was done through inference.
+                  <p>A reoccurring problem I faced throughout this app's development was being able to accurately differentiate which game update belonged to which team.  From the previous screenshots, it looks like this logic would be simple,
+                    but the underlying html did not carry any info on which update belonged to which team.
+                    <br>
+                    <br>
+                    Initially all methods of telling which game update belonged to which team was done through inference.
                     For example, one of the earliest ways I was parsing game updates was through looking at 'Jump Ball' text and who won the jump ball.  It might be an update saying, "Purdue won Jump Ball", and
-                    I could then carry the respective logo url as an identifier for Purdue updates.  This broke down in the overall workflow when I began grabbing data from further back in the season,
-                    where not every game was providing jump ball text.  'Home' versus 'Away' text could be used on a game-by-game basis, but there wasn't really anything reliable to consistently identify
+                    I could then carry the respective logo url as an identifier for Purdue updates (The respective game update would have a little Purdue logo next to it).  This logic broke down in the overall workflow when I began grabbing data from further back in the season,
+                    where not every game was providing jump ball text.
+                    <br>
+                    <br>
+                    'Home' versus 'Away' text could be used on a game-by-game basis, but there wasn't really anything reliable to consistently identify
                     who home and away was especially during tournament time.  The solution was to visit a separate espn stats table, showing season stats for all teams (complete with their logos), and to map 
                     each team to the respective logo url that espn.com was using.  I then kept this data for update lookups in the above table.  Basically on each game update, I'd look at the repsective team logo
-                    printed on the update line, get its url, and then find this url within my table, which would tell me the name of the team that specific update belonged to.
+                    printed on the update line, get its url, and then find this url within my mapping table.  This would tell me the name of the team that specific update belonged to.
                   </p>
                 </div>
               </div>
@@ -116,13 +122,13 @@
                 <div class="container">
                   <h5>Binning Stats</h5>
                   <p>Through some trial and error, I got to the point where I decided that binning the stats within 30 second timeframes was the most effective in working for my specific
-                    usecase--one in which I wanted a prediction for the final score as a function of how much time was remaining within the game (think betting live point totals).  The above table shows
-                    the results of iterating each game played by each team and binning stats for each team (I found this was a better predictor than just using the plain old season stats).
+                    usecase.  I wanted a prediction for the final score as a function of how much time was remaining within the game.  The above table shows
+                    the results of iterating each game played by each team and binning stats for each team.  This methodology appeared to be a better predictor than just using the plain old season stats.
                     <br>
                     <br>
-                    For example, looking at the topmost entry within the database table.  Those stats, for the team with an ID of 1, would average 10 three-pointers, 20 field goals, and 17 free throws.
-                    This is because that record is for 0-30 seconds remaining in the game (speaking bin-wise).  Now just to further illustrate, if you look at something like record
-                    14, that's effectively saying that team with ID of 1 usually has 9.3 three-pointers made, 17 field goals made, and 12.5 free throws made when there is 390 to 420 seconds remaining in
+                    For example, looking at the topmost entry within the database table...  Those stats, for the team with an ID of 1, would average 10 three-pointers, 20 field goals, and 17 free throws.
+                    This is because that record is for 0-30 seconds remaining in the game, speaking bin-wise.  Now just to further illustrate, if you look at something like record
+                    14, that's effectively saying that that same team, again with ID of 1, usually has 9.3 three-pointers made, 17 field goals made, and 12.5 free throws made when there is 390 to 420 seconds remaining in
                     the game.  Each of these individual observations at different points in time allow the model to tell whether a team is behind, at, or in front of their average in-game production.
                   </p>
                 </div>
@@ -158,8 +164,9 @@
                 <img src="{{ url_for('static', filename='images/pacer_app_images/ncaa_hoops_predictor_chart.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="ncaa-model-predictions-graphed">
                 <div class="container">
                   <h5>Graphing of Predictions Over Course of Game</h5>
-                  <p>And here's a plot of an example of the model's final point prediction over the course of a game (seconds remaining--unfortunately this reads backwards on this chart).  Effectively,
-                    I'd read this as, "Whichever team this was was paced for 87 total points up until about half.  They then fell to 83 to 85 total points."
+                  <p>And here's a plot of an example of the model's final point prediction over the course of a game (seconds remaining--unfortunately this reads backwards, right to left,  on this chart).  Effectively,
+                    I'd read this as, "Whichever team this was was paced for 87 total points up until about half.  They then fell to 83 to 85 total points.  This is versus the actual
+                    final point total of 84 points."  The red 'x' plot signifies the final total.
 
                     <br>
                     <br>
