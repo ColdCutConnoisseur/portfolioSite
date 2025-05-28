@@ -256,6 +256,72 @@
                   </p>
 
                 </div>
+
+              </div>
+
+              <div class="carousel-item">
+
+                <img src="{{ url_for('static', filename='images/ticket_inventory_app/tix_tracker_calendar.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="tickets-event-calendar">
+
+                <div class="container">
+
+                  <h5>Calendar Tab</h5>
+                  <p>Here's the initial calendar tab.  I currently only have functionality for the current month.  This is to help the end user to 
+                    visualize what events are upcoming.  If the user has open inventory for the current month, the calendar day (circle + number) is highlighted
+                    and the event name(s) is(are) populated for that date.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div class="carousel-item">
+
+                <img src="{{ url_for('static', filename='images/ticket_inventory_app/summary_stats.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="tickets-inventory-summary-stats">
+
+                <div class="container">
+
+                  <h5>Addition of Summary Stats</h5>
+                  <p>I added a summary stats box (light blue).  This is just a quick view for the end-user to see their exposure and a ballpark number for their
+                    mark-to-market (if they were to sell everything at current prices).  I'll format this to make it look nicer later.  I think it'd also
+                    be a good idea to track this mark-to-market number in the database so you can see daily changes and chart it too.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div class="carousel-item">
+
+                <img src="{{ url_for('static', filename='images/ticket_inventory_app/initial_watchlist_tab.png')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="tickets-event-watchlist-page">
+
+                <div class="container">
+
+                  <h5>Outline for Watchlist Tab</h5>
+                  <p>I don't even think that the watchlist needs its own tab.  But it'll just be a list where the user can add/delete shows to keep an eye on.
+                    The items in the list will be linked to the event calendar and I'll format them to differentiate them from shows with actual inventory.  This
+                    page isn't super important to the end user, so I'll build this one out later.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div class="carousel-item">
+
+                <img src="{{ url_for('static', filename='images/ticket_inventory_app/add_inventory_demo.gif')}}" class="img-fluid d-block w-75 mx-auto shadowed-img" alt="adding-ticket-inventory">
+
+                <div class="container">
+
+                  <h5>Adding Inventory</h5>
+                  <p>I'm starting to connect the CRUD functionality to forms on the editor page.  Still need to implement the Delete functionality.
+                    Here's a demo of adding inventory.
+                  </p>
+
+                </div>
+
+              </div>
+
             </div>
 
               <button class="carousel-control-prev" type="button" data-bs-target="#ticketInventoryCarousel" data-bs-slide="prev">
@@ -274,20 +340,20 @@
               <ul>
                 <li><code>Flask</code> for the web app functionality and dashboard</li>
                 <li><code>Chart.js</code> for initial visualizations / charting</li>
+                <li><code>Jinja</code> for html templating</li>
               </ul>
 
               <h3>What I Learned:</h3>
-              <p>This was my first time using the Chart.js package.  Also a good refresher on some javascript in general.
+              <p>This was my first time using the Chart.js package.
               </p>
 
               <br>
 
               <p>The most difficulty faced with this project was that after the app was hosted on pythonanywhere.com, the headless browser
               gets flagged by the ticket marketplace's cloudflare.  After digging into this issue a bit, I confirmed that the issue results
-              from pythonanywhere's server IP address (and not from being run as headless).  The programattic solution to this would be to use
-              a proxy service that provides reliable, residential proxies and just connect that service to the headless browser driver.  This
-              methodology starts to fall into a gray area in terms of ethical scraping, and may be against the ticket marketplace's bot outlines;
-               I've decided to call the price fetching locally for the time being.</p>
+              from pythonanywhere's server IP address (and not from being run as a headless driver).  The solution to this would be to pay for and use
+              a proxy service that provides residential proxies. This is just a hobby project for a friend so I'm going to have him just run this
+              locally for now.</p>
             </div>
 
         </div> <!--close accordion body-->
